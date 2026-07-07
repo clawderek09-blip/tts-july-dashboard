@@ -381,10 +381,6 @@ function render(data) {
         </table>
       </div>
     </section>
-
-    <aside class="embed-strip">
-      <strong>Embed-ready demo:</strong> this page can be hosted as a standalone URL and dropped into Nexus Tips with an iframe. The public file is <code>dashboard-data.json</code>, which contains values only.
-    </aside>
   `;
 }
 

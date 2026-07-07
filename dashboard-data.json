@@ -2,10 +2,10 @@
   "brand": "The Tipping Station",
   "title": "July 2026 Performance Dashboard",
   "subtitle": "Public proof view generated from values only.",
-  "bankSize": 500,
-  "pointValue": 5.0,
+  "bankSize": 1000,
+  "pointValue": 10.0,
   "period": "July 2026",
-  "updatedAt": "2026-07-07 16:31",
+  "updatedAt": "2026-07-07 17:52",
   "stats": {
     "bets": 81,
     "settled": 81,
@@ -16,11 +16,11 @@
     "losses": 14,
     "voids": 12,
     "stakePts": 71.5,
-    "stakeGbp": 357.5,
+    "stakeGbp": 715.0,
     "returnPts": 123.91,
-    "returnGbp": 619.56,
+    "returnGbp": 1239.12,
     "plPts": 52.41,
-    "plGbp": 262.06,
+    "plGbp": 524.12,
     "roi": 0.733,
     "strikeRate": 0.6667,
     "placeRate": 0.7971
@@ -30,9 +30,9 @@
     "label": "3 Jul",
     "bets": 19,
     "plPts": 18.11,
-    "plGbp": 90.54,
+    "plGbp": 181.09,
     "runningPts": 33.36,
-    "runningGbp": 166.78,
+    "runningGbp": 333.57,
     "roi": 1.0652
   },
   "worstDay": {
@@ -40,9 +40,9 @@
     "label": "6 Jul",
     "bets": 9,
     "plPts": 0.38,
-    "plGbp": 1.89,
+    "plGbp": 3.77,
     "runningPts": 52.41,
-    "runningGbp": 262.06,
+    "runningGbp": 524.12,
     "roi": 0.0503
   },
   "daily": [
@@ -51,9 +51,9 @@
       "label": "1 Jul",
       "bets": 13,
       "plPts": 7.18,
-      "plGbp": 35.88,
+      "plGbp": 71.76,
       "runningPts": 7.18,
-      "runningGbp": 35.88,
+      "runningGbp": 71.76,
       "roi": 0.6834
     },
     {
@@ -61,9 +61,9 @@
       "label": "2 Jul",
       "bets": 15,
       "plPts": 8.07,
-      "plGbp": 40.36,
+      "plGbp": 80.72,
       "runningPts": 15.25,
-      "runningGbp": 76.24,
+      "runningGbp": 152.48,
       "roi": 0.5979
     },
     {
@@ -71,9 +71,9 @@
       "label": "3 Jul",
       "bets": 19,
       "plPts": 18.11,
-      "plGbp": 90.54,
+      "plGbp": 181.09,
       "runningPts": 33.36,
-      "runningGbp": 166.78,
+      "runningGbp": 333.57,
       "roi": 1.0652
     },
     {
@@ -81,9 +81,9 @@
       "label": "4 Jul",
       "bets": 18,
       "plPts": 12.27,
-      "plGbp": 61.34,
+      "plGbp": 122.68,
       "runningPts": 45.62,
-      "runningGbp": 228.12,
+      "runningGbp": 456.25,
       "roi": 0.7435
     },
     {
@@ -91,9 +91,9 @@
       "label": "5 Jul",
       "bets": 7,
       "plPts": 6.41,
-      "plGbp": 32.05,
+      "plGbp": 64.1,
       "runningPts": 52.03,
-      "runningGbp": 260.17,
+      "runningGbp": 520.35,
       "roi": 0.9861
     },
     {
@@ -101,9 +101,9 @@
       "label": "6 Jul",
       "bets": 9,
       "plPts": 0.38,
-      "plGbp": 1.89,
+      "plGbp": 3.77,
       "runningPts": 52.41,
-      "runningGbp": 262.06,
+      "runningGbp": 524.12,
       "roi": 0.0503
     }
   ],
@@ -116,7 +116,7 @@
       "places": 0,
       "losses": 0,
       "plPts": 9.63,
-      "plGbp": 48.13,
+      "plGbp": 96.27,
       "roi": 2.4067,
       "avgOdds": 5.42
     },
@@ -128,7 +128,7 @@
       "places": 1,
       "losses": 1,
       "plPts": 6.93,
-      "plGbp": 34.67,
+      "plGbp": 69.33,
       "roi": 1.5407,
       "avgOdds": 5.23
     },
@@ -140,7 +140,7 @@
       "places": 0,
       "losses": 2,
       "plPts": 6.34,
-      "plGbp": 31.71,
+      "plGbp": 63.43,
       "roi": 1.2685,
       "avgOdds": 3.35
     },
@@ -152,7 +152,7 @@
       "places": 0,
       "losses": 1,
       "plPts": 3.82,
-      "plGbp": 19.09,
+      "plGbp": 38.18,
       "roi": 1.0909,
       "avgOdds": 3.2
     },
@@ -164,7 +164,7 @@
       "places": 0,
       "losses": 0,
       "plPts": 3.69,
-      "plGbp": 18.47,
+      "plGbp": 36.94,
       "roi": 0.9236,
       "avgOdds": 1.92
     },
@@ -176,7 +176,7 @@
       "places": 0,
       "losses": 0,
       "plPts": 3.03,
-      "plGbp": 15.15,
+      "plGbp": 30.3,
       "roi": 1.01,
       "avgOdds": 2.01
     },
@@ -188,7 +188,7 @@
       "places": 0,
       "losses": 0,
       "plPts": 2.45,
-      "plGbp": 12.25,
+      "plGbp": 24.5,
       "roi": 0.98,
       "avgOdds": 3.14
     },
@@ -200,7 +200,7 @@
       "places": 1,
       "losses": 1,
       "plPts": 2.17,
-      "plGbp": 10.82,
+      "plGbp": 21.65,
       "roi": 0.7217,
       "avgOdds": 4.3
     }
@@ -214,7 +214,7 @@
       "places": 0,
       "losses": 9,
       "plPts": 29.87,
-      "plGbp": 149.33,
+      "plGbp": 298.67,
       "roi": 0.5799,
       "avgOdds": 2.16
     },
@@ -226,7 +226,7 @@
       "places": 8,
       "losses": 5,
       "plPts": 10.28,
-      "plGbp": 51.38,
+      "plGbp": 102.75,
       "roi": 1.0275,
       "avgOdds": 7.59
     },
@@ -238,7 +238,7 @@
       "places": 0,
       "losses": 0,
       "plPts": 8.2,
-      "plGbp": 41.0,
+      "plGbp": 82.0,
       "roi": 4.1,
       "avgOdds": 5.1
     },
@@ -250,7 +250,7 @@
       "places": 0,
       "losses": 0,
       "plPts": 2.37,
-      "plGbp": 11.85,
+      "plGbp": 23.7,
       "roi": 0.79,
       "avgOdds": 1.79
     }
@@ -267,7 +267,7 @@
       "stakePts": 1.0,
       "returnPts": 3.69,
       "plPts": 2.69,
-      "plGbp": 13.45,
+      "plGbp": 26.9,
       "result": "Won",
       "calculable": true
     },
@@ -282,7 +282,7 @@
       "stakePts": 1.0,
       "returnPts": 1.33,
       "plPts": 0.33,
-      "plGbp": 1.67,
+      "plGbp": 3.33,
       "result": "Won",
       "calculable": true
     },
@@ -297,7 +297,7 @@
       "stakePts": 1.0,
       "returnPts": 1.7,
       "plPts": 0.7,
-      "plGbp": 3.5,
+      "plGbp": 7.0,
       "result": "Won",
       "calculable": true
     },
@@ -327,7 +327,7 @@
       "stakePts": 1.0,
       "returnPts": 2.2,
       "plPts": 1.2,
-      "plGbp": 6.0,
+      "plGbp": 12.0,
       "result": "Won",
       "calculable": true
     },
@@ -342,7 +342,7 @@
       "stakePts": 1.0,
       "returnPts": 0.0,
       "plPts": -1.0,
-      "plGbp": -5.0,
+      "plGbp": -10.0,
       "result": "Lost",
       "calculable": true
     },
@@ -357,7 +357,7 @@
       "stakePts": 0.5,
       "returnPts": 0.0,
       "plPts": -0.5,
-      "plGbp": -2.5,
+      "plGbp": -5.0,
       "result": "Lost",
       "calculable": true
     },
@@ -387,7 +387,7 @@
       "stakePts": 0.5,
       "returnPts": 0.47,
       "plPts": -0.03,
-      "plGbp": -0.12,
+      "plGbp": -0.25,
       "result": "Placed",
       "calculable": true
     },
@@ -417,7 +417,7 @@
       "stakePts": 0.5,
       "returnPts": 0.47,
       "plPts": -0.03,
-      "plGbp": -0.12,
+      "plGbp": -0.25,
       "result": "Placed",
       "calculable": true
     },
@@ -432,7 +432,7 @@
       "stakePts": 1.0,
       "returnPts": 1.73,
       "plPts": 0.73,
-      "plGbp": 3.64,
+      "plGbp": 7.27,
       "result": "Won",
       "calculable": true
     }
@@ -449,7 +449,7 @@
       "stakePts": 1.0,
       "returnPts": 6.51,
       "plPts": 5.51,
-      "plGbp": 27.55,
+      "plGbp": 55.1,
       "result": "Won",
       "calculable": true
     },
@@ -464,7 +464,7 @@
       "stakePts": 1.0,
       "returnPts": 6.4,
       "plPts": 5.4,
-      "plGbp": 27.0,
+      "plGbp": 54.0,
       "result": "Won",
       "calculable": true
     },
@@ -479,7 +479,7 @@
       "stakePts": 1.0,
       "returnPts": 6.0,
       "plPts": 5.0,
-      "plGbp": 25.0,
+      "plGbp": 50.0,
       "result": "Won",
       "calculable": true
     },
@@ -494,7 +494,7 @@
       "stakePts": 1.0,
       "returnPts": 3.69,
       "plPts": 2.69,
-      "plGbp": 13.45,
+      "plGbp": 26.9,
       "result": "Won",
       "calculable": true
     },
@@ -509,7 +509,7 @@
       "stakePts": 1.0,
       "returnPts": 3.5,
       "plPts": 2.5,
-      "plGbp": 12.5,
+      "plGbp": 25.0,
       "result": "Won",
       "calculable": true
     },
@@ -524,7 +524,7 @@
       "stakePts": 1.0,
       "returnPts": 3.5,
       "plPts": 2.5,
-      "plGbp": 12.5,
+      "plGbp": 25.0,
       "result": "Won",
       "calculable": true
     },
@@ -539,7 +539,7 @@
       "stakePts": 0.5,
       "returnPts": 2.75,
       "plPts": 2.25,
-      "plGbp": 11.25,
+      "plGbp": 22.5,
       "result": "Won",
       "calculable": true
     },
@@ -554,7 +554,7 @@
       "stakePts": 1.0,
       "returnPts": 3.0,
       "plPts": 2.0,
-      "plGbp": 10.0,
+      "plGbp": 20.0,
       "result": "Won",
       "calculable": true
     }
