@@ -5,7 +5,7 @@
   "bankSize": 1000,
   "pointValue": 10.0,
   "period": "July 2026",
-  "updatedAt": "2026-07-09 16:08",
+  "updatedAt": "2026-07-09 16:15",
   "stats": {
     "bets": 104,
     "settled": 104,
@@ -17,33 +17,33 @@
     "voids": 18,
     "stakePts": 94.0,
     "stakeGbp": 940.0,
-    "returnPts": 160.52,
-    "returnGbp": 1605.17,
-    "plPts": 66.52,
-    "plGbp": 665.17,
-    "roi": 0.7076,
-    "strikeRate": 0.6628,
-    "placeRate": 0.8023
+    "returnPts": 160.5,
+    "returnGbp": 1605.0,
+    "plPts": 66.53,
+    "plGbp": 665.3,
+    "roi": 0.71,
+    "strikeRate": 0.66,
+    "placeRate": 0.8
   },
   "bestDay": {
     "date": "2026-07-03",
     "label": "3 Jul",
     "bets": 19,
     "plPts": 18.11,
-    "plGbp": 181.09,
+    "plGbp": 181.1,
     "runningPts": 33.36,
-    "runningGbp": 333.57,
-    "roi": 1.0652
+    "runningGbp": 333.6,
+    "roi": 1.07
   },
   "worstDay": {
     "date": "2026-07-06",
     "label": "6 Jul",
     "bets": 9,
     "plPts": 0.38,
-    "plGbp": 3.77,
-    "runningPts": 52.41,
-    "runningGbp": 524.12,
-    "roi": 0.0503
+    "plGbp": 3.8,
+    "runningPts": 52.42,
+    "runningGbp": 524.2,
+    "roi": 0.05
   },
   "daily": [
     {
@@ -51,40 +51,40 @@
       "label": "1 Jul",
       "bets": 13,
       "plPts": 7.18,
-      "plGbp": 71.76,
+      "plGbp": 71.8,
       "runningPts": 7.18,
-      "runningGbp": 71.76,
-      "roi": 0.6834
+      "runningGbp": 71.8,
+      "roi": 0.68
     },
     {
       "date": "2026-07-02",
       "label": "2 Jul",
       "bets": 15,
       "plPts": 8.07,
-      "plGbp": 80.72,
+      "plGbp": 80.7,
       "runningPts": 15.25,
-      "runningGbp": 152.48,
-      "roi": 0.5979
+      "runningGbp": 152.5,
+      "roi": 0.6
     },
     {
       "date": "2026-07-03",
       "label": "3 Jul",
       "bets": 19,
       "plPts": 18.11,
-      "plGbp": 181.09,
+      "plGbp": 181.1,
       "runningPts": 33.36,
-      "runningGbp": 333.57,
-      "roi": 1.0652
+      "runningGbp": 333.6,
+      "roi": 1.07
     },
     {
       "date": "2026-07-04",
       "label": "4 Jul",
       "bets": 18,
       "plPts": 12.27,
-      "plGbp": 122.68,
-      "runningPts": 45.62,
-      "runningGbp": 456.25,
-      "roi": 0.7435
+      "plGbp": 122.7,
+      "runningPts": 45.63,
+      "runningGbp": 456.3,
+      "roi": 0.74
     },
     {
       "date": "2026-07-05",
@@ -92,28 +92,28 @@
       "bets": 7,
       "plPts": 6.41,
       "plGbp": 64.1,
-      "runningPts": 52.03,
-      "runningGbp": 520.35,
-      "roi": 0.9861
+      "runningPts": 52.04,
+      "runningGbp": 520.4,
+      "roi": 0.99
     },
     {
       "date": "2026-07-06",
       "label": "6 Jul",
       "bets": 9,
       "plPts": 0.38,
-      "plGbp": 3.77,
-      "runningPts": 52.41,
-      "runningGbp": 524.12,
-      "roi": 0.0503
+      "plGbp": 3.8,
+      "runningPts": 52.42,
+      "runningGbp": 524.2,
+      "roi": 0.05
     },
     {
       "date": "2026-07-07",
       "label": "7 Jul",
       "bets": 12,
       "plPts": 10.01,
-      "plGbp": 100.05,
-      "runningPts": 62.42,
-      "runningGbp": 624.17,
+      "plGbp": 100.1,
+      "runningPts": 62.43,
+      "runningGbp": 624.3,
       "roi": 0.87
     },
     {
@@ -121,10 +121,10 @@
       "label": "8 Jul",
       "bets": 11,
       "plPts": 4.1,
-      "plGbp": 41.0,
-      "runningPts": 66.52,
-      "runningGbp": 665.17,
-      "roi": 0.3727
+      "plGbp": 41,
+      "runningPts": 66.53,
+      "runningGbp": 665.3,
+      "roi": 0.37
     }
   ],
   "courses": [
@@ -136,8 +136,8 @@
       "places": 0,
       "losses": 0,
       "plPts": 9.63,
-      "plGbp": 96.27,
-      "roi": 2.4067,
+      "plGbp": 96.3,
+      "roi": 2.41,
       "avgOdds": 5.42
     },
     {
@@ -147,9 +147,9 @@
       "wins": 3,
       "places": 0,
       "losses": 0,
-      "plPts": 7.05,
-      "plGbp": 70.55,
-      "roi": 1.7637,
+      "plPts": 7.06,
+      "plGbp": 70.6,
+      "roi": 1.76,
       "avgOdds": 3.04
     },
     {
@@ -160,8 +160,8 @@
       "places": 1,
       "losses": 1,
       "plPts": 6.93,
-      "plGbp": 69.33,
-      "roi": 1.5407,
+      "plGbp": 69.3,
+      "roi": 1.54,
       "avgOdds": 5.23
     },
     {
@@ -171,9 +171,9 @@
       "wins": 4,
       "places": 0,
       "losses": 2,
-      "plPts": 6.34,
-      "plGbp": 63.43,
-      "roi": 1.2685,
+      "plPts": 6.35,
+      "plGbp": 63.5,
+      "roi": 1.27,
       "avgOdds": 3.35
     },
     {
@@ -184,9 +184,9 @@
       "places": 0,
       "losses": 1,
       "plPts": 3.82,
-      "plGbp": 38.18,
-      "roi": 1.0909,
-      "avgOdds": 3.2
+      "plGbp": 38.2,
+      "roi": 1.09,
+      "avgOdds": 3.21
     },
     {
       "name": "Beverley",
@@ -196,8 +196,8 @@
       "places": 0,
       "losses": 0,
       "plPts": 3.69,
-      "plGbp": 36.94,
-      "roi": 0.9236,
+      "plGbp": 36.9,
+      "roi": 0.92,
       "avgOdds": 1.92
     },
     {
@@ -234,8 +234,8 @@
       "places": 0,
       "losses": 11,
       "plPts": 36.94,
-      "plGbp": 369.42,
-      "roi": 0.5555,
+      "plGbp": 369.4,
+      "roi": 0.56,
       "avgOdds": 2.19
     },
     {
@@ -257,9 +257,9 @@
       "wins": 5,
       "places": 11,
       "losses": 6,
-      "plPts": 10.73,
-      "plGbp": 107.25,
-      "roi": 0.7944,
+      "plPts": 10.71,
+      "plGbp": 107.1,
+      "roi": 0.79,
       "avgOdds": 7.72
     },
     {
@@ -271,7 +271,7 @@
       "losses": 0,
       "plPts": 3.27,
       "plGbp": 32.7,
-      "roi": 0.8175,
+      "roi": 0.82,
       "avgOdds": 1.82
     },
     {
@@ -301,8 +301,8 @@
   ],
   "notes": [
     "All figures use a \u00a31000 bank, where 1 point = \u00a310.",
-    "Refunds are settled as void/0 P&L with stake returned.",
-    "Each-way selections use total point stake and 1/5 place terms unless a posted return/refund overrides it."
+    "Displayed \u00a3 P/L values equal displayed point P/L x 10.",
+    "Refunds are settled as void/0 P&L with stake returned."
   ],
   "recentBets": [
     {
@@ -331,7 +331,7 @@
       "stakePts": 1.0,
       "returnPts": 1.83,
       "plPts": 0.83,
-      "plGbp": 8.33,
+      "plGbp": 8.3,
       "result": "Won",
       "calculable": true
     },
@@ -391,7 +391,7 @@
       "stakePts": 1.0,
       "returnPts": 1.83,
       "plPts": 0.83,
-      "plGbp": 8.33,
+      "plGbp": 8.3,
       "result": "Won",
       "calculable": true
     },
@@ -436,7 +436,7 @@
       "stakePts": 1.0,
       "returnPts": 1.83,
       "plPts": 0.83,
-      "plGbp": 8.33,
+      "plGbp": 8.3,
       "result": "Won",
       "calculable": true
     },
