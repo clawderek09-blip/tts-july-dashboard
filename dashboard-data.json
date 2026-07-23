@@ -5,7 +5,7 @@
   "bankSize": 1000,
   "pointValue": 10,
   "period": "July 2026",
-  "updatedAt": "2026-07-23 22:32",
+  "updatedAt": "2026-07-23 22:46",
   "stats": {
     "bets": 265,
     "settled": 265,
@@ -15,13 +15,13 @@
     "places": 36,
     "losses": 48,
     "voids": 39,
-    "stakePts": 246.75,
-    "stakeGbp": 2467.5,
-    "returnPts": 422.43,
-    "returnGbp": 4224.3,
-    "plPts": 175.68,
-    "plGbp": 1756.8,
-    "roi": 0.712,
+    "stakePts": 247.5,
+    "stakeGbp": 2475.0,
+    "returnPts": 428.76,
+    "returnGbp": 4287.6,
+    "plPts": 181.26,
+    "plGbp": 1812.6,
+    "roi": 0.7324,
     "strikeRate": 0.6283,
     "placeRate": 0.7876
   },
@@ -230,11 +230,11 @@
       "date": "2026-07-23",
       "label": "23 Jul",
       "bets": 26,
-      "plPts": 9.47,
-      "plGbp": 94.7,
-      "runningPts": 175.68,
-      "runningGbp": 1756.8,
-      "roi": 0.4073
+      "plPts": 15.05,
+      "plGbp": 150.5,
+      "runningPts": 181.26,
+      "runningGbp": 1812.6,
+      "roi": 0.6271
     }
   ],
   "courses": [
@@ -269,10 +269,10 @@
       "wins": 5,
       "places": 1,
       "losses": 1,
-      "plPts": 10.36,
-      "plGbp": 103.6,
-      "roi": 1.2188,
-      "avgOdds": 4.15
+      "plPts": 10.47,
+      "plGbp": 104.7,
+      "roi": 1.2318,
+      "avgOdds": 4.17
     },
     {
       "name": "Bellewstown",
@@ -343,10 +343,10 @@
       "wins": 109,
       "places": 0,
       "losses": 38,
-      "plPts": 104.05,
-      "plGbp": 1040.5,
-      "roi": 0.6193,
-      "avgOdds": 2.47
+      "plPts": 107.86,
+      "plGbp": 1078.6,
+      "roi": 0.642,
+      "avgOdds": 2.49
     },
     {
       "name": "Reverse Forecast",
@@ -361,6 +361,18 @@
       "avgOdds": 4.74
     },
     {
+      "name": "Each Way",
+      "bets": 51,
+      "calculable": 51,
+      "wins": 7,
+      "places": 35,
+      "losses": 9,
+      "plPts": 15.29,
+      "plGbp": 152.9,
+      "roi": 0.3971,
+      "avgOdds": 7.27
+    },
+    {
       "name": "Straight Forecast",
       "bets": 10,
       "calculable": 10,
@@ -371,18 +383,6 @@
       "plGbp": 141.7,
       "roi": 1.417,
       "avgOdds": 2.42
-    },
-    {
-      "name": "Each Way",
-      "bets": 51,
-      "calculable": 51,
-      "wins": 7,
-      "places": 35,
-      "losses": 9,
-      "plPts": 13.52,
-      "plGbp": 135.2,
-      "roi": 0.3581,
-      "avgOdds": 7.27
     }
   ],
   "recentBets": [
@@ -453,11 +453,11 @@
       "horse": "Rogue Allegiance",
       "tipster": "The Tipping Station",
       "betType": "Win",
-      "odds": 3.0,
+      "odds": 4.0,
       "stakePts": 1.0,
-      "returnPts": 3.0,
-      "plPts": 2.0,
-      "plGbp": 20.0,
+      "returnPts": 4.0,
+      "plPts": 3.0,
+      "plGbp": 30.0,
       "result": "Won",
       "calculable": true
     },
@@ -499,10 +499,10 @@
       "tipster": "The Tipping Station",
       "betType": "Each Way",
       "odds": 5.5,
-      "stakePts": 0.25,
-      "returnPts": 0.93,
-      "plPts": 0.68,
-      "plGbp": 6.8,
+      "stakePts": 0.5,
+      "returnPts": 1.85,
+      "plPts": 1.35,
+      "plGbp": 13.5,
       "result": "Won",
       "calculable": true
     },
@@ -513,11 +513,11 @@
       "horse": "Campeona",
       "tipster": "The Tipping Station",
       "betType": "Win",
-      "odds": 1.29,
+      "odds": 1.4,
       "stakePts": 1.0,
-      "returnPts": 1.29,
-      "plPts": 0.29,
-      "plGbp": 2.9,
+      "returnPts": 1.4,
+      "plPts": 0.4,
+      "plGbp": 4.0,
       "result": "Won",
       "calculable": true
     },
@@ -529,10 +529,10 @@
       "tipster": "The Tipping Station",
       "betType": "Each Way",
       "odds": 10.0,
-      "stakePts": 0.25,
-      "returnPts": 1.6,
-      "plPts": 1.35,
-      "plGbp": 13.5,
+      "stakePts": 0.5,
+      "returnPts": 3.2,
+      "plPts": 2.7,
+      "plGbp": 27.0,
       "result": "Won",
       "calculable": true
     },
