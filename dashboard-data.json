@@ -5,25 +5,25 @@
   "bankSize": 1000,
   "pointValue": 10,
   "period": "July 2026",
-  "updatedAt": "2026-07-26 20:13",
+  "updatedAt": "2026-07-26 20:27",
   "stats": {
     "bets": 303,
     "settled": 303,
     "calculable": 303,
     "pendingPnl": 0,
     "wins": 161,
-    "places": 38,
-    "losses": 61,
+    "places": 42,
+    "losses": 57,
     "voids": 43,
     "stakePts": 283.0,
     "stakeGbp": 2830.0,
-    "returnPts": 491.87,
-    "returnGbp": 4918.7,
-    "plPts": 208.87,
-    "plGbp": 2088.7,
-    "roi": 0.7381,
+    "returnPts": 498.07,
+    "returnGbp": 4980.7,
+    "plPts": 215.07,
+    "plGbp": 2150.7,
+    "roi": 0.76,
     "strikeRate": 0.6192,
-    "placeRate": 0.7654
+    "placeRate": 0.7808
   },
   "bestDay": {
     "date": "2026-07-10",
@@ -240,21 +240,21 @@
       "date": "2026-07-24",
       "label": "24 Jul",
       "bets": 14,
-      "plPts": 8.48,
-      "plGbp": 84.8,
-      "runningPts": 189.74,
-      "runningGbp": 1897.4,
-      "roi": 0.6281
+      "plPts": 10.88,
+      "plGbp": 108.8,
+      "runningPts": 192.14,
+      "runningGbp": 1921.4,
+      "roi": 0.8059
     },
     {
       "date": "2026-07-25",
       "label": "25 Jul",
       "bets": 15,
-      "plPts": 17.79,
-      "plGbp": 177.9,
-      "runningPts": 207.53,
-      "runningGbp": 2075.3,
-      "roi": 1.2269
+      "plPts": 21.59,
+      "plGbp": 215.9,
+      "runningPts": 213.73,
+      "runningGbp": 2137.3,
+      "roi": 1.489
     },
     {
       "date": "2026-07-26",
@@ -262,8 +262,8 @@
       "bets": 9,
       "plPts": 1.34,
       "plGbp": 13.4,
-      "runningPts": 208.87,
-      "runningGbp": 2088.7,
+      "runningPts": 215.07,
+      "runningGbp": 2150.7,
       "roi": 0.1787
     }
   ],
@@ -273,11 +273,11 @@
       "bets": 11,
       "calculable": 11,
       "wins": 5,
-      "places": 0,
-      "losses": 6,
-      "plPts": 18.9,
-      "plGbp": 189.0,
-      "roi": 1.89,
+      "places": 2,
+      "losses": 4,
+      "plPts": 22.7,
+      "plGbp": 227.0,
+      "roi": 2.27,
       "avgOdds": 7.57
     },
     {
@@ -285,11 +285,11 @@
       "bets": 10,
       "calculable": 10,
       "wins": 6,
-      "places": 0,
-      "losses": 2,
-      "plPts": 16.19,
-      "plGbp": 161.9,
-      "roi": 1.7042,
+      "places": 1,
+      "losses": 1,
+      "plPts": 17.19,
+      "plGbp": 171.9,
+      "roi": 1.8095,
       "avgOdds": 3.86
     },
     {
@@ -368,15 +368,15 @@
   "betTypes": [
     {
       "name": "Win",
-      "bets": 201,
-      "calculable": 201,
+      "bets": 197,
+      "calculable": 197,
       "wins": 123,
       "places": 0,
-      "losses": 48,
-      "plPts": 132.95,
-      "plGbp": 1329.5,
-      "roi": 0.6818,
-      "avgOdds": 2.79
+      "losses": 44,
+      "plPts": 136.95,
+      "plGbp": 1369.5,
+      "roi": 0.717,
+      "avgOdds": 2.61
     },
     {
       "name": "Reverse Forecast",
@@ -391,6 +391,18 @@
       "avgOdds": 4.74
     },
     {
+      "name": "Each Way",
+      "bets": 58,
+      "calculable": 58,
+      "wins": 7,
+      "places": 41,
+      "losses": 10,
+      "plPts": 16.93,
+      "plGbp": 169.3,
+      "roi": 0.3848,
+      "avgOdds": 7.48
+    },
+    {
       "name": "Straight Forecast",
       "bets": 11,
       "calculable": 11,
@@ -401,18 +413,6 @@
       "plGbp": 153.5,
       "roi": 1.3955,
       "avgOdds": 2.4
-    },
-    {
-      "name": "Each Way",
-      "bets": 54,
-      "calculable": 54,
-      "wins": 7,
-      "places": 37,
-      "losses": 10,
-      "plPts": 14.73,
-      "plGbp": 147.3,
-      "roi": 0.3683,
-      "avgOdds": 7.17
     }
   ],
   "recentBets": [
