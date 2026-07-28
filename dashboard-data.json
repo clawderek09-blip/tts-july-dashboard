@@ -5,7 +5,7 @@
   "bankSize": 1000,
   "pointValue": 10,
   "period": "July 2026",
-  "updatedAt": "2026-07-28 00:21",
+  "updatedAt": "2026-07-28 00:27",
   "stats": {
     "bets": 314,
     "settled": 314,
@@ -17,11 +17,11 @@
     "voids": 44,
     "stakePts": 292.0,
     "stakeGbp": 2920.0,
-    "returnPts": 510.69,
-    "returnGbp": 5106.9,
-    "plPts": 218.69,
-    "plGbp": 2186.9,
-    "roi": 0.7489,
+    "returnPts": 511.41,
+    "returnGbp": 5114.1,
+    "plPts": 219.41,
+    "plGbp": 2194.1,
+    "roi": 0.7514,
     "strikeRate": 0.6037,
     "placeRate": 0.7704
   },
@@ -270,11 +270,11 @@
       "date": "2026-07-27",
       "label": "27 Jul",
       "bets": 11,
-      "plPts": 3.62,
-      "plGbp": 36.2,
-      "runningPts": 218.69,
-      "runningGbp": 2186.9,
-      "roi": 0.4022
+      "plPts": 4.34,
+      "plGbp": 43.4,
+      "runningPts": 219.41,
+      "runningGbp": 2194.1,
+      "roi": 0.4822
     }
   ],
   "courses": [
@@ -378,14 +378,14 @@
   "betTypes": [
     {
       "name": "Win",
-      "bets": 198,
-      "calculable": 198,
-      "wins": 123,
+      "bets": 199,
+      "calculable": 199,
+      "wins": 124,
       "places": 0,
       "losses": 45,
-      "plPts": 135.95,
-      "plGbp": 1359.5,
-      "roi": 0.7081,
+      "plPts": 137.58,
+      "plGbp": 1375.8,
+      "roi": 0.7128,
       "avgOdds": 2.6
     },
     {
@@ -507,12 +507,12 @@
       "course": "Galway",
       "horse": "Witches Familiar",
       "tipster": "The Tipping Station",
-      "betType": "Cover/Insure",
-      "odds": 1.91,
+      "betType": "Win",
+      "odds": 2.63,
       "stakePts": 1.0,
-      "returnPts": 1.91,
-      "plPts": 0.91,
-      "plGbp": 9.1,
+      "returnPts": 2.63,
+      "plPts": 1.63,
+      "plGbp": 16.3,
       "result": "Won",
       "calculable": true
     },
