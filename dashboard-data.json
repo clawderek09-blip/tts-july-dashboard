@@ -5,7 +5,7 @@
   "bankSize": 1000,
   "pointValue": 10,
   "period": "July 2026",
-  "updatedAt": "2026-07-28 00:10",
+  "updatedAt": "2026-07-28 00:21",
   "stats": {
     "bets": 314,
     "settled": 314,
@@ -17,11 +17,11 @@
     "voids": 44,
     "stakePts": 292.0,
     "stakeGbp": 2920.0,
-    "returnPts": 506.11,
-    "returnGbp": 5061.1,
-    "plPts": 214.11,
-    "plGbp": 2141.1,
-    "roi": 0.7333,
+    "returnPts": 510.69,
+    "returnGbp": 5106.9,
+    "plPts": 218.69,
+    "plGbp": 2186.9,
+    "roi": 0.7489,
     "strikeRate": 0.6037,
     "placeRate": 0.7704
   },
@@ -270,11 +270,11 @@
       "date": "2026-07-27",
       "label": "27 Jul",
       "bets": 11,
-      "plPts": -0.96,
-      "plGbp": -9.6,
-      "runningPts": 214.11,
-      "runningGbp": 2141.1,
-      "roi": -0.1067
+      "plPts": 3.62,
+      "plGbp": 36.2,
+      "runningPts": 218.69,
+      "runningGbp": 2186.9,
+      "roi": 0.4022
     }
   ],
   "courses": [
@@ -351,6 +351,18 @@
       "avgOdds": 5.42
     },
     {
+      "name": "Southwell",
+      "bets": 12,
+      "calculable": 12,
+      "wins": 3,
+      "places": 4,
+      "losses": 4,
+      "plPts": 9.49,
+      "plGbp": 94.9,
+      "roi": 0.9038,
+      "avgOdds": 4.22
+    },
+    {
       "name": "Thirsk",
       "bets": 8,
       "calculable": 8,
@@ -361,18 +373,6 @@
       "plGbp": 94.3,
       "roi": 1.2573,
       "avgOdds": 4.4
-    },
-    {
-      "name": "Pontefract",
-      "bets": 11,
-      "calculable": 11,
-      "wins": 8,
-      "places": 2,
-      "losses": 1,
-      "plPts": 8.09,
-      "plGbp": 80.9,
-      "roi": 0.7705,
-      "avgOdds": 2.75
     }
   ],
   "betTypes": [
@@ -450,9 +450,9 @@
       "betType": "Cover/Insure",
       "odds": 3.5,
       "stakePts": 1.0,
-      "returnPts": 1.0,
-      "plPts": 0.0,
-      "plGbp": 0.0,
+      "returnPts": 3.5,
+      "plPts": 2.5,
+      "plGbp": 25.0,
       "result": "Placed",
       "calculable": true
     },
@@ -463,11 +463,11 @@
       "horse": "Humphrey",
       "tipster": "The Tipping Station",
       "betType": "Cover/Insure",
-      "odds": 0.0,
+      "odds": 2.25,
       "stakePts": 1.0,
-      "returnPts": 1.0,
-      "plPts": 0.0,
-      "plGbp": 0.0,
+      "returnPts": 2.25,
+      "plPts": 1.25,
+      "plGbp": 12.5,
       "result": "Placed",
       "calculable": true
     },
@@ -495,9 +495,9 @@
       "betType": "Cover/Insure",
       "odds": 1.83,
       "stakePts": 1.0,
-      "returnPts": 1.0,
-      "plPts": 0.0,
-      "plGbp": 0.0,
+      "returnPts": 1.83,
+      "plPts": 0.83,
+      "plGbp": 8.3,
       "result": "Placed",
       "calculable": true
     },
