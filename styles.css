@@ -210,10 +210,24 @@ textarea {
   text-transform: uppercase;
 }
 
+.month-block {
+  margin-top: 34px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.month-block.is-current {
+  border-top-color: rgba(0,217,255,0.38);
+}
+
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
+}
+
+.kpi-grid.compact {
+  margin-bottom: 12px;
 }
 
 .kpi-card,
@@ -283,7 +297,12 @@ textarea {
 
 .chart-panel {
   min-height: 390px;
+  min-width: 0;
   padding: 18px;
+}
+
+.cumulative-panel {
+  margin-bottom: 10px;
 }
 
 .panel-top {
@@ -306,7 +325,21 @@ textarea {
 }
 
 .chart-wrap {
+  width: 100%;
+  max-width: 100%;
   min-height: 292px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.chart-wrap svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.chart-wrap svg.is-short-series {
+  min-width: 100%;
 }
 
 .axis-labels {
@@ -388,6 +421,11 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+  margin-top: 12px;
+}
+
+.proof-grid.single {
+  grid-template-columns: 1fr;
 }
 
 .proof-card {
@@ -418,6 +456,7 @@ textarea {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
+  margin-top: 12px;
 }
 
 .rank-panel {
@@ -473,10 +512,31 @@ textarea {
 
 .table-panel {
   overflow: hidden;
+  margin-top: 12px;
 }
 
 .table-scroll {
   overflow-x: auto;
+}
+
+.table-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 18px 4px;
+}
+
+.table-title h3 {
+  margin: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.table-title span {
+  color: var(--dim);
+  font-size: 11px;
+  text-transform: uppercase;
 }
 
 table {
@@ -550,6 +610,20 @@ td {
   color: var(--muted);
 }
 
+.empty-panel {
+  min-height: 126px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  border: 1px dashed rgba(255,255,255,0.18);
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .embed-strip {
   margin-top: 18px;
   padding: 14px 16px;
@@ -586,6 +660,7 @@ td {
 
   .kpi-grid,
   .proof-grid,
+  .proof-grid.single,
   .rank-grid,
   .visual-grid {
     grid-template-columns: 1fr;
@@ -614,5 +689,21 @@ td {
 
   .panel-top {
     flex-direction: column;
+  }
+
+  .chart-panel {
+    min-height: 0;
+    padding: 14px;
+  }
+
+  .chart-wrap {
+    min-height: 224px;
+    margin: 0 -4px;
+    padding: 0 4px;
+  }
+
+  .axis-labels {
+    font-size: 9px;
+    line-height: 1.2;
   }
 }

@@ -33,6 +33,31 @@ function percent(value) {
   return pct.format(Number(value || 0));
 }
 
+function fractionalOdds(decimalOdds, betType = "") {
+  const decimal = Number(decimalOdds);
+  if (!Number.isFinite(decimal) || decimal <= 1) return "-";
+
+  const fractional = decimal - 1;
+  if (/forecast|tricast/i.test(betType)) {
+    return `${fractional.toFixed(2).replace(/\.00$/, "")}/1`;
+  }
+
+  const racingDenominators = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20];
+  let best = { numerator: Math.round(fractional), denominator: 1, error: Math.abs(fractional - Math.round(fractional)) };
+  for (const denominator of racingDenominators) {
+    const numerator = Math.round(fractional * denominator);
+    const value = numerator / denominator;
+    const error = Math.abs(fractional - value);
+    if (error < best.error) best = { numerator, denominator, error };
+  }
+
+  if (best.denominator === 1 || best.error <= 0.015) {
+    return `${best.numerator}/${best.denominator}`;
+  }
+
+  return `${fractional.toFixed(2).replace(/\.00$/, "")}/1`;
+}
+
 function shortDayLabel(label) {
   return String(label || "").replace(/\s+[A-Za-z]{3}$/, "");
 }
@@ -41,37 +66,70 @@ function statusClass(result) {
   return String(result || "").toLowerCase().replace(/\s+/g, "-");
 }
 
+function normalisePayload(data) {
+  if (Array.isArray(data.periods)) return data;
+  return {
+    brand: data.brand,
+    title: data.title,
+    subtitle: data.subtitle,
+    bankSize: data.bankSize,
+    pointValue: data.pointValue,
+    updatedAt: data.updatedAt,
+    cumulative: {
+      period: data.period,
+      updatedAt: data.updatedAt,
+      stats: data.stats,
+      daily: data.daily,
+      bestMonth: data,
+    },
+    periods: [data],
+  };
+}
+
+function emptyPanel(message = "Awaiting the first settled August card.") {
+  return `<div class="empty-panel">${message}</div>`;
+}
+
 function lineChart(daily, pointValue = 1) {
-  const width = 840;
+  if (!daily.length) return emptyPanel("No daily P/L points yet.");
+
+  const compactChart = window.matchMedia?.("(max-width: 520px)").matches;
+  const width = compactChart ? 420 : 840;
   const height = 286;
-  const pad = 54;
+  const pad = compactChart ? 42 : 54;
   const axisY = height - pad;
   const values = daily.map((item) => Number(item.runningPts ?? (Number(item.runningGbp || 0) / pointValue)));
   const min = Math.min(0, ...values);
   const max = Math.max(0, ...values);
-  const rawSpan = max - min || 1;
-  const stepBase = 10 ** Math.floor(Math.log10(rawSpan / 4));
-  const stepRatio = rawSpan / 4 / stepBase;
-  const tickStep = stepBase * (stepRatio <= 1 ? 1 : stepRatio <= 2 ? 2 : stepRatio <= 5 ? 5 : 10);
-  const chartMin = Math.floor(min / tickStep) * tickStep;
-  let chartMax = Math.ceil(max / tickStep) * tickStep;
-  if (chartMax === chartMin) chartMax += tickStep;
+  const rangeUnit = max <= 60 && min >= 0 ? 10 : max <= 400 && min >= 0 ? 20 : 50;
+  const chartMin = min >= 0 ? 0 : Math.floor(min / rangeUnit) * rangeUnit;
+  const paddedMax = daily.length === 1 && max > 0 ? max * 1.25 : max;
+  let chartMax = Math.ceil(paddedMax / rangeUnit) * rangeUnit;
+  if (chartMax === chartMin) chartMax += rangeUnit;
   const span = chartMax - chartMin;
+  const tickStep = span <= 40 ? 10 : span <= 120 ? 20 : span <= 240 ? 40 : span <= 360 ? 80 : Math.ceil(span / 4 / 50) * 50;
+  const singlePoint = daily.length === 1;
   const xStep = (width - pad * 2) / Math.max(daily.length - 1, 1);
   const yFor = (value) => height - pad - ((value - chartMin) / span) * (height - pad * 2);
-  const xFor = (idx) => pad + idx * xStep;
-  const points = daily.map((item, idx) => `${xFor(idx)},${yFor(Number(item.runningPts ?? (Number(item.runningGbp || 0) / pointValue)))}`).join(" ");
-  const area = `${pad},${axisY} ${points} ${width - pad},${axisY}`;
+  const xFor = (idx) => (singlePoint ? width - pad : pad + idx * xStep);
+  const points = singlePoint
+    ? `${pad},${yFor(values[0])} ${width - pad},${yFor(values[0])}`
+    : daily.map((item, idx) => `${xFor(idx)},${yFor(Number(item.runningPts ?? (Number(item.runningGbp || 0) / pointValue)))}`).join(" ");
+  const area = singlePoint
+    ? `${pad},${axisY} ${pad},${yFor(values[0])} ${width - pad},${yFor(values[0])} ${width - pad},${axisY}`
+    : `${pad},${axisY} ${points} ${width - pad},${axisY}`;
   const zeroY = yFor(0);
   const yTicks = [];
+
   for (let tick = chartMin; tick <= chartMax + tickStep / 2; tick += tickStep) {
     const y = yFor(tick);
     yTicks.push(`<g>
       <line x1="${pad}" y1="${y.toFixed(2)}" x2="${width - pad}" y2="${y.toFixed(2)}" stroke="rgba(255,255,255,0.075)" />
-      <text x="${pad - 11}" y="${(y + 5).toFixed(2)}" fill="rgba(255,255,255,0.56)" font-size="15" text-anchor="end">${tick > 0 ? "+" : ""}${plain.format(tick)}</text>
+      <text x="${pad - 9}" y="${(y + 5).toFixed(2)}" fill="rgba(255,255,255,0.56)" font-size="${compactChart ? 11 : 15}" text-anchor="end">${tick > 0 ? "+" : ""}${plain.format(tick)}</text>
     </g>`);
   }
-  const labelStep = Math.max(1, Math.ceil(daily.length / 6));
+
+  const labelStep = Math.max(1, Math.ceil(daily.length / 7));
   const xTicks = daily
     .map((item, idx) => {
       const x = xFor(idx);
@@ -80,7 +138,7 @@ function lineChart(daily, pointValue = 1) {
         <circle cx="${x.toFixed(2)}" cy="${axisY}" r="3" fill="rgba(255,255,255,0.2)" stroke="rgba(0,217,255,0.42)" stroke-width="1.5">
           <title>${item.label}: ${signedPoints(item.runningPts ?? (Number(item.runningGbp || 0) / pointValue))} / ${signedMoney(item.runningGbp)}</title>
         </circle>
-        ${showLabel ? `<text x="${x.toFixed(2)}" y="${height - 7}" fill="rgba(255,255,255,0.42)" font-size="11" text-anchor="${idx === 0 ? "start" : idx === daily.length - 1 ? "end" : "middle"}">${shortDayLabel(item.label)}</text>` : ""}
+        ${showLabel ? `<text x="${x.toFixed(2)}" y="${height - 7}" fill="rgba(255,255,255,0.42)" font-size="${compactChart ? 9 : 11}" text-anchor="${idx === 0 ? "start" : idx === daily.length - 1 ? "end" : "middle"}">${shortDayLabel(item.label)}</text>` : ""}
       </g>`;
     })
     .join("");
@@ -97,7 +155,7 @@ function lineChart(daily, pointValue = 1) {
     .join("");
 
   return `
-    <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Cumulative profit and loss chart">
+    <svg class="pl-chart ${daily.length <= 7 ? "is-short-series" : "is-long-series"}" viewBox="0 0 ${width} ${height}" role="img" aria-label="Cumulative profit and loss chart">
       <defs>
         <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
           <stop stop-color="var(--red)" offset="0%" />
@@ -111,29 +169,13 @@ function lineChart(daily, pointValue = 1) {
       </defs>
       <line x1="${pad}" y1="${zeroY}" x2="${width - pad}" y2="${zeroY}" stroke="rgba(255,255,255,0.2)" stroke-dasharray="5 8" />
       <polygon points="${area}" fill="url(#areaGradient)" opacity="0.75"></polygon>
-      <text x="${pad - 11}" y="${pad - 18}" fill="rgba(0,217,255,0.68)" font-size="13" text-anchor="end">PTS</text>
+      <text x="${pad - 9}" y="${pad - 18}" fill="rgba(0,217,255,0.68)" font-size="${compactChart ? 10 : 13}" text-anchor="end">PTS</text>
       ${yTicks.join("")}
       ${xTicks}
       <polyline points="${points}" fill="none" stroke="url(#lineGradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
       ${dots}
     </svg>
   `;
-}
-
-function dailyBars(daily) {
-  const maxAbs = Math.max(...daily.map((item) => Math.abs(item.plGbp)), 1);
-  return daily
-    .map((item) => {
-      const h = Math.max(8, (Math.abs(item.plGbp) / maxAbs) * 120);
-      const positive = item.plGbp >= 0;
-      return `
-        <div class="day-bar" title="${item.label}: ${signedMoney(item.plGbp)}">
-          <span class="${positive ? "up" : "down"}" style="height:${h}px"></span>
-          <small>${shortDayLabel(item.label)}</small>
-        </div>
-      `;
-    })
-    .join("");
 }
 
 function kpi(label, value, note, accent = "var(--cyan)", cls = "") {
@@ -147,11 +189,13 @@ function kpi(label, value, note, accent = "var(--cyan)", cls = "") {
 }
 
 function rankRows(items) {
+  if (!items.length) return emptyPanel("Breakdowns will populate when August data is added.");
+
   const max = Math.max(...items.map((item) => Math.abs(item.plGbp)), 1);
   return items
     .map((item) => {
       const hasPnl = Number(item.calculable || 0) > 0;
-      const plPts = Number(item.plPts ?? (Number(item.plGbp || 0) / 5));
+      const plPts = Number(item.plPts ?? (Number(item.plGbp || 0) / 10));
       return `
       <div class="rank-row">
         <div class="rank-name">
@@ -170,10 +214,14 @@ function rankRows(items) {
 }
 
 function betRows(items) {
+  if (!items.length) {
+    return `<tr><td colspan="8">No settled bets in this section yet.</td></tr>`;
+  }
+
   return items
     .map((bet) => {
       const hasPnl = bet.calculable !== false && bet.plGbp !== null && bet.plGbp !== undefined;
-      const plPts = Number(bet.plPts ?? (Number(bet.plGbp || 0) / 5));
+      const plPts = Number(bet.plPts ?? (Number(bet.plGbp || 0) / 10));
       return `
       <tr>
         <td>${bet.date.slice(5)}</td>
@@ -181,7 +229,7 @@ function betRows(items) {
         <td>${bet.horse}</td>
         <td>${bet.course}</td>
         <td>${bet.betType}</td>
-        <td>${bet.odds ? plain.format(bet.odds) : "-"}</td>
+        <td>${fractionalOdds(bet.odds, bet.betType)}</td>
         <td><span class="result-badge ${statusClass(bet.result)}">${bet.result}</span></td>
         <td>
           <span class="pnl-stack ${!hasPnl ? "neutral" : bet.plGbp >= 0 ? "positive" : "negative"}">
@@ -195,12 +243,164 @@ function betRows(items) {
     .join("");
 }
 
+function monthCards(period) {
+  const stats = period.stats;
+  return `
+    <section class="kpi-grid compact">
+      ${kpi("Month P/L", signedPoints(stats.plPts), `${signedMoney(stats.plGbp)} net`, "var(--green)", stats.plGbp >= 0 ? "positive" : "negative")}
+      ${kpi("ROI", percent(stats.roi), `${money(stats.stakeGbp)} staked`, "var(--cyan)", stats.roi >= 0 ? "positive" : "negative")}
+      ${kpi("Bets", plain.format(stats.bets), `${stats.calculable} priced for P/L`, "var(--gold)")}
+      ${kpi("Win / Place", percent(stats.placeRate), `${stats.wins + stats.places} returns`, "var(--red)")}
+    </section>
+  `;
+}
+
+function proofCards(period) {
+  const stats = period.stats;
+  if (!period.bestDay || !period.worstDay) {
+    return `
+      <section class="proof-grid single">
+        <article class="proof-card">
+          <span>Monthly Status</span>
+          <strong class="neutral">Ready</strong>
+          <p>${period.period} is set up as a separate monthly tracker. The first August selections will populate the tables, curve, and breakdowns here.</p>
+        </article>
+      </section>
+    `;
+  }
+
+  return `
+    <section class="proof-grid">
+      <article class="proof-card">
+        <span>Best Day</span>
+        <strong class="positive">${signedPoints(period.bestDay.plPts ?? (period.bestDay.plGbp / period.pointValue))}</strong>
+        <p>${signedMoney(period.bestDay.plGbp)} · ${period.bestDay.label}, ${period.bestDay.bets} bets, ${percent(period.bestDay.roi)} ROI.</p>
+      </article>
+      <article class="proof-card">
+        <span>Worst Day</span>
+        <strong class="negative">${signedPoints(period.worstDay.plPts ?? (period.worstDay.plGbp / period.pointValue))}</strong>
+        <p>${signedMoney(period.worstDay.plGbp)} · ${period.worstDay.label}, useful context for variance and drawdowns.</p>
+      </article>
+      <article class="proof-card">
+        <span>Returns</span>
+        <strong>${money(stats.returnGbp)}</strong>
+        <p>From ${money(stats.stakeGbp)} calculable stake across ${period.period}.</p>
+      </article>
+    </section>
+  `;
+}
+
+function monthSection(period, index) {
+  const stats = period.stats;
+  const periodMonth = String(period.period || "").split(" ")[0] || "Current";
+  const wonDeg = stats.settled ? (stats.wins / stats.settled) * 360 : 0;
+  const placeDeg = stats.settled ? ((stats.wins + stats.places) / stats.settled) * 360 : 0;
+  const lostDeg = stats.settled ? ((stats.wins + stats.places + stats.losses) / stats.settled) * 360 : 0;
+
+  return `
+    <section class="month-block ${index === 0 ? "is-current" : ""}">
+      <div class="section-heading">
+        <h2>${period.period}</h2>
+        <span>${index === 0 ? "Current month" : "Archived month"} · values-only export</span>
+      </div>
+
+      ${monthCards(period)}
+
+      <section class="visual-grid">
+        <article class="chart-panel">
+          <div class="panel-top">
+            <div>
+              <h3>${periodMonth} P/L Curve</h3>
+              <p>${stats.bets ? `${period.period} is ${signedPoints(stats.plPts)} (${signedMoney(stats.plGbp)}) from ${stats.calculable} priced selections.` : "Awaiting the first August results."}</p>
+            </div>
+            <span class="pill cyan">${signedPoints(stats.plPts)}</span>
+          </div>
+          <div class="chart-wrap">${lineChart(period.daily || [], period.pointValue)}</div>
+          <div class="axis-labels">
+            <span>${period.daily?.[0]?.label || ""}</span>
+            <span>${period.daily?.[period.daily.length - 1]?.label || ""}</span>
+          </div>
+        </article>
+
+        <article class="split-panel" style="--won-deg:${wonDeg}deg;--place-deg:${placeDeg}deg;--lost-deg:${lostDeg}deg">
+          <div class="panel-top">
+            <div>
+              <h3>Result Split</h3>
+              <p>Settled selections by outcome.</p>
+            </div>
+          </div>
+          <div class="result-ring">
+            <div class="ring-core">
+              <div>
+                <strong>${stats.settled}</strong>
+                <span>settled</span>
+              </div>
+            </div>
+          </div>
+          <div class="legend">
+            <div class="legend-row"><span><i style="--dot:var(--green)"></i>Won</span><strong>${stats.wins}</strong></div>
+            <div class="legend-row"><span><i style="--dot:var(--cyan)"></i>Placed</span><strong>${stats.places}</strong></div>
+            <div class="legend-row"><span><i style="--dot:var(--red)"></i>Lost</span><strong>${stats.losses}</strong></div>
+            <div class="legend-row"><span><i style="--dot:rgba(255,255,255,0.35)"></i>Void</span><strong>${stats.voids}</strong></div>
+          </div>
+        </article>
+      </section>
+
+      ${proofCards(period)}
+
+      <section class="rank-grid">
+        <article class="rank-panel">
+          <div class="panel-top">
+            <div>
+              <h3>Top Courses</h3>
+              <p>Ranked by ${periodMonth} P/L.</p>
+            </div>
+          </div>
+          <div class="rank-list">${rankRows(period.courses || [])}</div>
+        </article>
+        <article class="rank-panel">
+          <div class="panel-top">
+            <div>
+              <h3>Bet Type</h3>
+              <p>Win vs each-way performance.</p>
+            </div>
+          </div>
+          <div class="rank-list">${rankRows(period.betTypes || [])}</div>
+        </article>
+      </section>
+
+      <section class="table-panel">
+        <div class="table-title">
+          <h3>${stats.bets ? "Top Winners" : "Bet Log"}</h3>
+          <span>${periodMonth} proof table</span>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Horse</th>
+                <th>Course</th>
+                <th>Bet</th>
+                <th>Odds</th>
+                <th>Result</th>
+                <th>P/L</th>
+              </tr>
+            </thead>
+            <tbody>${betRows(stats.bets ? period.topWinners : period.recentBets)}</tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  `;
+}
+
 function render(data) {
-  const { stats } = data;
-  const periodMonth = String(data.period || "").split(" ")[0] || "Current";
-  const wonDeg = (stats.wins / stats.settled) * 360;
-  const placeDeg = ((stats.wins + stats.places) / stats.settled) * 360;
-  const lostDeg = ((stats.wins + stats.places + stats.losses) / stats.settled) * 360;
+  const payload = normalisePayload(data);
+  const stats = payload.cumulative.stats;
+  const currentPeriod = payload.periods[0] || payload.cumulative;
+  const currentStats = currentPeriod.stats;
 
   app.innerHTML = `
     <section class="hero">
@@ -209,177 +409,46 @@ function render(data) {
           <img class="brand-mark" src="https://nexus-tips.com/wp-content/uploads/2023/04/TTS-Website-Logo-300x300.png" alt="" />
           <div>
             <p class="eyebrow">Welcome to</p>
-            <p class="brand-name">${data.brand}</p>
+            <p class="brand-name">${payload.brand}</p>
           </div>
         </div>
         <div class="hero-title">
-          <h1>${data.period}<br />Results dashboard</h1>
-          <p>£ figures tracked to a ${money(data.bankSize)} bank.</p>
+          <h1>PNL<br />Dashboard</h1>
+          <p>Month by month tracked tips. Fully transparent. Scroll down to the bottom to see cumulative PNL.</p>
         </div>
         <div class="hero-meta">
-          <span class="pill cyan">${stats.bets} tracked bets</span>
-          <span class="pill gold">${money(data.bankSize)} bank</span>
-          <span class="pill">1pt = ${money(data.pointValue)}</span>
-          <span class="pill">${stats.calculable} priced for P/L</span>
-          <span class="pill">Updated ${data.updatedAt}</span>
+          <span class="pill cyan">${currentStats.bets} August bets</span>
+          <span class="pill gold">${money(payload.bankSize)} bank</span>
+          <span class="pill">1pt = ${money(payload.pointValue)}</span>
+          <span class="pill">${currentStats.calculable} priced for P/L</span>
+          <span class="pill">Updated ${payload.updatedAt}</span>
         </div>
       </div>
     </section>
 
+    ${payload.periods.map(monthSection).join("")}
+
     <section class="section-heading">
-      <h2>${periodMonth} Performance</h2>
-      <span>Proof dashboard · values-only export</span>
+      <h2>Cumulative P/L</h2>
+      <span>All months combined</span>
     </section>
 
     <section class="kpi-grid">
-      ${kpi("Total P/L", signedPoints(stats.plPts), `${signedMoney(stats.plGbp)} · ${stats.calculable} priced`, "var(--green)", stats.plGbp >= 0 ? "positive" : "negative")}
+      ${kpi("Total P/L", signedPoints(stats.plPts), `${signedMoney(stats.plGbp)} net`, "var(--green)", stats.plGbp >= 0 ? "positive" : "negative")}
       ${kpi("ROI", percent(stats.roi), `${money(stats.stakeGbp)} calculable stake`, "var(--cyan)", stats.roi >= 0 ? "positive" : "negative")}
       ${kpi("Strike Rate", percent(stats.strikeRate), `${stats.wins} winners`, "var(--gold)")}
       ${kpi("Win / Place", percent(stats.placeRate), `${stats.wins + stats.places} returns`, "var(--red)")}
     </section>
 
-    <section class="section-heading">
-      <h2>Profit Curve</h2>
-      <span>Daily running P/L</span>
-    </section>
-
-    <section class="visual-grid">
-      <article class="chart-panel">
-        <div class="panel-top">
-          <div>
-            <h3>Cumulative P/L</h3>
-            <p>${data.period} is currently ${signedPoints(stats.plPts)} (${signedMoney(stats.plGbp)}) from ${stats.calculable} priced Tipping Station selections.</p>
-          </div>
-          <span class="pill cyan">${signedPoints(stats.plPts)}</span>
+    <section class="chart-panel cumulative-panel">
+      <div class="panel-top">
+        <div>
+          <h3>Running P/L Across Months</h3>
+          <p>July remains intact underneath. August starts above it and will extend the same public proof flow.</p>
         </div>
-        <div class="chart-wrap">${lineChart(data.daily, data.pointValue)}</div>
-        <div class="axis-labels">
-          <span>${data.daily[0]?.label || ""}</span>
-          <span>${data.daily[data.daily.length - 1]?.label || ""}</span>
-        </div>
-      </article>
-
-      <article class="split-panel" style="--won-deg:${wonDeg}deg;--place-deg:${placeDeg}deg;--lost-deg:${lostDeg}deg">
-        <div class="panel-top">
-          <div>
-            <h3>Result Split</h3>
-            <p>Settled selections by outcome.</p>
-          </div>
-        </div>
-        <div class="result-ring">
-          <div class="ring-core">
-            <div>
-              <strong>${stats.settled}</strong>
-              <span>settled</span>
-            </div>
-          </div>
-        </div>
-        <div class="legend">
-          <div class="legend-row"><span><i style="--dot:var(--green)"></i>Won</span><strong>${stats.wins}</strong></div>
-          <div class="legend-row"><span><i style="--dot:var(--cyan)"></i>Placed</span><strong>${stats.places}</strong></div>
-          <div class="legend-row"><span><i style="--dot:var(--red)"></i>Lost</span><strong>${stats.losses}</strong></div>
-          <div class="legend-row"><span><i style="--dot:rgba(255,255,255,0.35)"></i>Void</span><strong>${stats.voids}</strong></div>
-        </div>
-      </article>
-    </section>
-
-    <section class="section-heading">
-      <h2>Sharpest Spots</h2>
-      <span>Best and worst markers</span>
-    </section>
-
-    <section class="proof-grid">
-      <article class="proof-card">
-        <span>Best Day</span>
-        <strong class="positive">${signedPoints(data.bestDay.plPts ?? (data.bestDay.plGbp / data.pointValue))}</strong>
-        <p>${signedMoney(data.bestDay.plGbp)} · ${data.bestDay.label}, ${data.bestDay.bets} bets, ${percent(data.bestDay.roi)} ROI.</p>
-      </article>
-      <article class="proof-card">
-        <span>Worst Day</span>
-        <strong class="negative">${signedPoints(data.worstDay.plPts ?? (data.worstDay.plGbp / data.pointValue))}</strong>
-        <p>${signedMoney(data.worstDay.plGbp)} · ${data.worstDay.label}, useful context for variance and drawdowns.</p>
-      </article>
-      <article class="proof-card">
-        <span>Returns</span>
-        <strong>${money(stats.returnGbp)}</strong>
-        <p>From ${money(stats.stakeGbp)} calculable stake across ${data.period}.</p>
-      </article>
-    </section>
-
-    <section class="section-heading">
-      <h2>Breakdowns</h2>
-      <span>Courses and bet types</span>
-    </section>
-
-    <section class="rank-grid">
-      <article class="rank-panel">
-        <div class="panel-top">
-          <div>
-            <h3>Top Courses</h3>
-            <p>Ranked by ${periodMonth} P/L.</p>
-          </div>
-        </div>
-        <div class="rank-list">${rankRows(data.courses)}</div>
-      </article>
-      <article class="rank-panel">
-        <div class="panel-top">
-          <div>
-            <h3>Bet Type</h3>
-            <p>Win vs each-way performance.</p>
-          </div>
-        </div>
-        <div class="rank-list">${rankRows(data.betTypes)}</div>
-      </article>
-    </section>
-
-    <section class="section-heading">
-      <h2>Top Winners</h2>
-      <span>Public proof table</span>
-    </section>
-
-    <section class="table-panel">
-      <div class="table-scroll">
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Horse</th>
-              <th>Course</th>
-              <th>Bet</th>
-              <th>Odds</th>
-              <th>Result</th>
-              <th>P/L</th>
-            </tr>
-          </thead>
-          <tbody>${betRows(data.topWinners)}</tbody>
-        </table>
+        <span class="pill cyan">${signedPoints(stats.plPts)}</span>
       </div>
-    </section>
-
-    <section class="section-heading">
-      <h2>Recent Settled</h2>
-      <span>Latest ${periodMonth} entries</span>
-    </section>
-
-    <section class="table-panel">
-      <div class="table-scroll">
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Horse</th>
-              <th>Course</th>
-              <th>Bet</th>
-              <th>Odds</th>
-              <th>Result</th>
-              <th>P/L</th>
-            </tr>
-          </thead>
-          <tbody>${betRows(data.recentBets)}</tbody>
-        </table>
-      </div>
+      <div class="chart-wrap">${lineChart(payload.cumulative.daily || [], payload.pointValue)}</div>
     </section>
   `;
 }
