@@ -4,10 +4,10 @@
   "subtitle": "Continuous proof view with August stacked above July.",
   "bankSize": 1000,
   "pointValue": 10,
-  "updatedAt": "2026-08-08 10:30",
+  "updatedAt": "2026-08-08 10:39",
   "cumulative": {
     "period": "Cumulative 2026",
-    "updatedAt": "2026-08-08 10:30",
+    "updatedAt": "2026-08-08 10:39",
     "stats": {
       "bets": 428,
       "settled": 428,
@@ -19,11 +19,11 @@
       "voids": 60,
       "stakePts": 403.0,
       "stakeGbp": 4030.0,
-      "returnPts": 923.3,
-      "returnGbp": 9233.0,
-      "plPts": 520.3,
-      "plGbp": 5203.0,
-      "roi": 1.2911,
+      "returnPts": 788.28,
+      "returnGbp": 7882.8,
+      "plPts": 385.28,
+      "plGbp": 3852.8,
+      "roi": 0.956,
       "strikeRate": 0.6304,
       "placeRate": 0.7935
     },
@@ -342,11 +342,11 @@
         "date": "2026-08-07",
         "label": "7 Aug",
         "bets": 14,
-        "plPts": 154.41,
-        "plGbp": 1544.1,
-        "runningPts": 520.3,
-        "runningGbp": 5203.0,
-        "roi": 11.0293
+        "plPts": 19.39,
+        "plGbp": 193.9,
+        "runningPts": 385.28,
+        "runningGbp": 3852.8,
+        "roi": 1.385
       }
     ],
     "bestMonth": {
@@ -356,7 +356,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-08-08 10:30",
+      "updatedAt": "2026-08-08 10:39",
       "stats": {
         "bets": 367,
         "settled": 367,
@@ -1130,7 +1130,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "August 2026",
-      "updatedAt": "2026-08-08 10:30",
+      "updatedAt": "2026-08-08 10:39",
       "stats": {
         "bets": 61,
         "settled": 61,
@@ -1142,11 +1142,11 @@
         "voids": 9,
         "stakePts": 60.0,
         "stakeGbp": 600.0,
-        "returnPts": 272.28,
-        "returnGbp": 2722.8,
-        "plPts": 212.28,
-        "plGbp": 2122.8,
-        "roi": 3.538,
+        "returnPts": 137.26,
+        "returnGbp": 1372.6,
+        "plPts": 77.26,
+        "plGbp": 772.6,
+        "roi": 1.2877,
         "strikeRate": 0.7692,
         "placeRate": 0.8654
       },
@@ -1154,11 +1154,11 @@
         "date": "2026-08-07",
         "label": "7 Aug",
         "bets": 14,
-        "plPts": 154.41,
-        "plGbp": 1544.1,
-        "runningPts": 212.28,
-        "runningGbp": 2122.8,
-        "roi": 11.0293
+        "plPts": 19.39,
+        "plGbp": 193.9,
+        "runningPts": 77.26,
+        "runningGbp": 772.6,
+        "roi": 1.385
       },
       "worstDay": {
         "date": "2026-08-03",
@@ -1215,11 +1215,11 @@
           "date": "2026-08-07",
           "label": "7 Aug",
           "bets": 14,
-          "plPts": 154.41,
-          "plGbp": 1544.1,
-          "runningPts": 212.28,
-          "runningGbp": 2122.8,
-          "roi": 11.0293
+          "plPts": 19.39,
+          "plGbp": 193.9,
+          "runningPts": 77.26,
+          "runningGbp": 772.6,
+          "roi": 1.385
         }
       ],
       "courses": [
@@ -1230,10 +1230,10 @@
           "wins": 6,
           "places": 1,
           "losses": 1,
-          "plPts": 146.45,
-          "plGbp": 1464.5,
-          "roi": 18.3063,
-          "avgOdds": 20.14
+          "plPts": 11.43,
+          "plGbp": 114.3,
+          "roi": 1.4287,
+          "avgOdds": 3.26
         },
         {
           "name": "Naas",
@@ -1322,18 +1322,6 @@
       ],
       "betTypes": [
         {
-          "name": "Reverse Forecast",
-          "bets": 3,
-          "calculable": 3,
-          "wins": 3,
-          "places": 0,
-          "losses": 0,
-          "plPts": 150.36,
-          "plGbp": 1503.6,
-          "roi": 50.12,
-          "avgOdds": 51.12
-        },
-        {
           "name": "Win",
           "bets": 51,
           "calculable": 51,
@@ -1344,6 +1332,18 @@
           "plGbp": 601.7,
           "roi": 1.1915,
           "avgOdds": 2.72
+        },
+        {
+          "name": "Reverse Forecast",
+          "bets": 3,
+          "calculable": 3,
+          "wins": 3,
+          "places": 0,
+          "losses": 0,
+          "plPts": 15.34,
+          "plGbp": 153.4,
+          "roi": 5.1133,
+          "avgOdds": 6.11
         },
         {
           "name": "Straight Forecast",
@@ -1513,11 +1513,11 @@
           "horse": "Nabati / Tawakal",
           "tipster": "The Tipping Station",
           "betType": "Reverse Forecast",
-          "odds": 141.02,
+          "odds": 6.0,
           "stakePts": 1.0,
-          "returnPts": 141.02,
-          "plPts": 140.02,
-          "plGbp": 1400.2,
+          "returnPts": 6.0,
+          "plPts": 5.0,
+          "plGbp": 50.0,
           "result": "Won",
           "calculable": true
         },
@@ -1553,21 +1553,6 @@
         }
       ],
       "topWinners": [
-        {
-          "date": "2026-08-07",
-          "time": "18:37",
-          "course": "Newmarket",
-          "horse": "Nabati / Tawakal",
-          "tipster": "The Tipping Station",
-          "betType": "Reverse Forecast",
-          "odds": 141.02,
-          "stakePts": 1.0,
-          "returnPts": 141.02,
-          "plPts": 140.02,
-          "plGbp": 1400.2,
-          "result": "Won",
-          "calculable": true
-        },
         {
           "date": "2026-08-03",
           "time": "15:17",
@@ -1659,6 +1644,21 @@
           "calculable": true
         },
         {
+          "date": "2026-08-07",
+          "time": "18:37",
+          "course": "Newmarket",
+          "horse": "Nabati / Tawakal",
+          "tipster": "The Tipping Station",
+          "betType": "Reverse Forecast",
+          "odds": 6.0,
+          "stakePts": 1.0,
+          "returnPts": 6.0,
+          "plPts": 5.0,
+          "plGbp": 50.0,
+          "result": "Won",
+          "calculable": true
+        },
+        {
           "date": "2026-08-01",
           "time": "14:13",
           "course": "Newmarket",
@@ -1682,7 +1682,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-08-08 10:30",
+      "updatedAt": "2026-08-08 10:39",
       "stats": {
         "bets": 367,
         "settled": 367,
