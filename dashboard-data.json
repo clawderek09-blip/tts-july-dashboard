@@ -4,28 +4,28 @@
   "subtitle": "Continuous proof view with August stacked above July.",
   "bankSize": 1000,
   "pointValue": 10,
-  "updatedAt": "2026-08-14 20:37",
+  "updatedAt": "2026-08-14 20:59",
   "cumulative": {
     "period": "Cumulative 2026",
-    "updatedAt": "2026-08-14 20:37",
+    "updatedAt": "2026-08-14 20:59",
     "stats": {
-      "bets": 494,
-      "settled": 494,
-      "calculable": 494,
+      "bets": 493,
+      "settled": 493,
+      "calculable": 493,
       "pendingPnl": 0,
       "wins": 274,
       "places": 63,
-      "losses": 88,
+      "losses": 87,
       "voids": 69,
-      "stakePts": 460.0,
-      "stakeGbp": 4600.0,
-      "returnPts": 902.62,
-      "returnGbp": 9026.2,
-      "plPts": 442.62,
-      "plGbp": 4426.2,
-      "roi": 0.9622,
-      "strikeRate": 0.6447,
-      "placeRate": 0.7929
+      "stakePts": 456.5,
+      "stakeGbp": 4565.0,
+      "returnPts": 889.39,
+      "returnGbp": 8893.9,
+      "plPts": 432.89,
+      "plGbp": 4328.9,
+      "roi": 0.9483,
+      "strikeRate": 0.6462,
+      "placeRate": 0.7948
     },
     "daily": [
       {
@@ -302,21 +302,21 @@
         "date": "2026-08-01",
         "label": "1 Aug",
         "bets": 14,
-        "plPts": 17.96,
-        "plGbp": 179.6,
-        "runningPts": 325.98,
-        "runningGbp": 3259.8,
-        "roi": 1.2829
+        "plPts": 17.86,
+        "plGbp": 178.6,
+        "runningPts": 325.88,
+        "runningGbp": 3258.8,
+        "roi": 1.3738
       },
       {
         "date": "2026-08-03",
         "label": "3 Aug",
         "bets": 6,
-        "plPts": 10.98,
-        "plGbp": 109.8,
-        "runningPts": 336.96,
-        "runningGbp": 3369.6,
-        "roi": 1.83
+        "plPts": 4.55,
+        "plGbp": 45.5,
+        "runningPts": 330.43,
+        "runningGbp": 3304.3,
+        "roi": 0.91
       },
       {
         "date": "2026-08-04",
@@ -324,19 +324,19 @@
         "bets": 14,
         "plPts": 13.17,
         "plGbp": 131.7,
-        "runningPts": 350.13,
-        "runningGbp": 3501.3,
+        "runningPts": 343.6,
+        "runningGbp": 3436.0,
         "roi": 0.9756
       },
       {
         "date": "2026-08-05",
         "label": "5 Aug",
         "bets": 13,
-        "plPts": 15.76,
-        "plGbp": 157.6,
-        "runningPts": 365.89,
-        "runningGbp": 3658.9,
-        "roi": 1.2608
+        "plPts": 11.56,
+        "plGbp": 115.6,
+        "runningPts": 355.16,
+        "runningGbp": 3551.6,
+        "roi": 0.9633
       },
       {
         "date": "2026-08-07",
@@ -344,8 +344,8 @@
         "bets": 14,
         "plPts": 19.39,
         "plGbp": 193.9,
-        "runningPts": 385.28,
-        "runningGbp": 3852.8,
+        "runningPts": 374.55,
+        "runningGbp": 3745.5,
         "roi": 1.385
       },
       {
@@ -354,8 +354,8 @@
         "bets": 9,
         "plPts": 15.75,
         "plGbp": 157.5,
-        "runningPts": 401.03,
-        "runningGbp": 4010.3,
+        "runningPts": 390.3,
+        "runningGbp": 3903.0,
         "roi": 2.1
       },
       {
@@ -364,8 +364,8 @@
         "bets": 10,
         "plPts": 5.18,
         "plGbp": 51.8,
-        "runningPts": 406.21,
-        "runningGbp": 4062.1,
+        "runningPts": 395.48,
+        "runningGbp": 3954.8,
         "roi": 0.6907
       },
       {
@@ -374,8 +374,8 @@
         "bets": 11,
         "plPts": 10.26,
         "plGbp": 102.6,
-        "runningPts": 416.47,
-        "runningGbp": 4164.7,
+        "runningPts": 405.74,
+        "runningGbp": 4057.4,
         "roi": 1.08
       },
       {
@@ -384,19 +384,19 @@
         "bets": 14,
         "plPts": 10.02,
         "plGbp": 100.2,
-        "runningPts": 426.49,
-        "runningGbp": 4264.9,
+        "runningPts": 415.76,
+        "runningGbp": 4157.6,
         "roi": 0.7708
       },
       {
         "date": "2026-08-14",
         "label": "14 Aug",
-        "bets": 22,
-        "plPts": 16.13,
-        "plGbp": 161.3,
-        "runningPts": 442.62,
-        "runningGbp": 4426.2,
-        "roi": 0.8272
+        "bets": 21,
+        "plPts": 17.13,
+        "plGbp": 171.3,
+        "runningPts": 432.89,
+        "runningGbp": 4328.9,
+        "roi": 0.9259
       }
     ],
     "bestMonth": {
@@ -406,7 +406,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-08-14 20:37",
+      "updatedAt": "2026-08-14 20:59",
       "stats": {
         "bets": 367,
         "settled": 367,
@@ -1180,25 +1180,25 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "August 2026",
-      "updatedAt": "2026-08-14 20:37",
+      "updatedAt": "2026-08-14 20:59",
       "stats": {
-        "bets": 127,
-        "settled": 127,
-        "calculable": 127,
+        "bets": 126,
+        "settled": 126,
+        "calculable": 126,
         "pendingPnl": 0,
         "wins": 82,
         "places": 8,
-        "losses": 19,
+        "losses": 18,
         "voids": 18,
-        "stakePts": 117.0,
-        "stakeGbp": 1170.0,
-        "returnPts": 251.6,
-        "returnGbp": 2516.0,
-        "plPts": 134.6,
-        "plGbp": 1346.0,
-        "roi": 1.1504,
-        "strikeRate": 0.7523,
-        "placeRate": 0.8257
+        "stakePts": 113.5,
+        "stakeGbp": 1135.0,
+        "returnPts": 238.37,
+        "returnGbp": 2383.7,
+        "plPts": 124.87,
+        "plGbp": 1248.7,
+        "roi": 1.1002,
+        "strikeRate": 0.7593,
+        "placeRate": 0.8333
       },
       "bestDay": {
         "date": "2026-08-07",
@@ -1206,40 +1206,40 @@
         "bets": 14,
         "plPts": 19.39,
         "plGbp": 193.9,
-        "runningPts": 77.26,
-        "runningGbp": 772.6,
+        "runningPts": 66.53,
+        "runningGbp": 665.3,
         "roi": 1.385
       },
       "worstDay": {
-        "date": "2026-08-11",
-        "label": "11 Aug",
-        "bets": 10,
-        "plPts": 5.18,
-        "plGbp": 51.8,
-        "runningPts": 98.19,
-        "runningGbp": 981.9,
-        "roi": 0.6907
+        "date": "2026-08-03",
+        "label": "3 Aug",
+        "bets": 6,
+        "plPts": 4.55,
+        "plGbp": 45.5,
+        "runningPts": 22.41,
+        "runningGbp": 224.1,
+        "roi": 0.91
       },
       "daily": [
         {
           "date": "2026-08-01",
           "label": "1 Aug",
           "bets": 14,
-          "plPts": 17.96,
-          "plGbp": 179.6,
-          "runningPts": 17.96,
-          "runningGbp": 179.6,
-          "roi": 1.2829
+          "plPts": 17.86,
+          "plGbp": 178.6,
+          "runningPts": 17.86,
+          "runningGbp": 178.6,
+          "roi": 1.3738
         },
         {
           "date": "2026-08-03",
           "label": "3 Aug",
           "bets": 6,
-          "plPts": 10.98,
-          "plGbp": 109.8,
-          "runningPts": 28.94,
-          "runningGbp": 289.4,
-          "roi": 1.83
+          "plPts": 4.55,
+          "plGbp": 45.5,
+          "runningPts": 22.41,
+          "runningGbp": 224.1,
+          "roi": 0.91
         },
         {
           "date": "2026-08-04",
@@ -1247,19 +1247,19 @@
           "bets": 14,
           "plPts": 13.17,
           "plGbp": 131.7,
-          "runningPts": 42.11,
-          "runningGbp": 421.1,
+          "runningPts": 35.58,
+          "runningGbp": 355.8,
           "roi": 0.9756
         },
         {
           "date": "2026-08-05",
           "label": "5 Aug",
           "bets": 13,
-          "plPts": 15.76,
-          "plGbp": 157.6,
-          "runningPts": 57.87,
-          "runningGbp": 578.7,
-          "roi": 1.2608
+          "plPts": 11.56,
+          "plGbp": 115.6,
+          "runningPts": 47.14,
+          "runningGbp": 471.4,
+          "roi": 0.9633
         },
         {
           "date": "2026-08-07",
@@ -1267,8 +1267,8 @@
           "bets": 14,
           "plPts": 19.39,
           "plGbp": 193.9,
-          "runningPts": 77.26,
-          "runningGbp": 772.6,
+          "runningPts": 66.53,
+          "runningGbp": 665.3,
           "roi": 1.385
         },
         {
@@ -1277,8 +1277,8 @@
           "bets": 9,
           "plPts": 15.75,
           "plGbp": 157.5,
-          "runningPts": 93.01,
-          "runningGbp": 930.1,
+          "runningPts": 82.28,
+          "runningGbp": 822.8,
           "roi": 2.1
         },
         {
@@ -1287,8 +1287,8 @@
           "bets": 10,
           "plPts": 5.18,
           "plGbp": 51.8,
-          "runningPts": 98.19,
-          "runningGbp": 981.9,
+          "runningPts": 87.46,
+          "runningGbp": 874.6,
           "roi": 0.6907
         },
         {
@@ -1297,8 +1297,8 @@
           "bets": 11,
           "plPts": 10.26,
           "plGbp": 102.6,
-          "runningPts": 108.45,
-          "runningGbp": 1084.5,
+          "runningPts": 97.72,
+          "runningGbp": 977.2,
           "roi": 1.08
         },
         {
@@ -1307,19 +1307,19 @@
           "bets": 14,
           "plPts": 10.02,
           "plGbp": 100.2,
-          "runningPts": 118.47,
-          "runningGbp": 1184.7,
+          "runningPts": 107.74,
+          "runningGbp": 1077.4,
           "roi": 0.7708
         },
         {
           "date": "2026-08-14",
           "label": "14 Aug",
-          "bets": 22,
-          "plPts": 16.13,
-          "plGbp": 161.3,
-          "runningPts": 134.6,
-          "runningGbp": 1346.0,
-          "roi": 0.8272
+          "bets": 21,
+          "plPts": 17.13,
+          "plGbp": 171.3,
+          "runningPts": 124.87,
+          "runningGbp": 1248.7,
+          "roi": 0.9259
         }
       ],
       "courses": [
@@ -1334,18 +1334,6 @@
           "plGbp": 108.3,
           "roi": 1.083,
           "avgOdds": 2.95
-        },
-        {
-          "name": "Naas",
-          "bets": 3,
-          "calculable": 3,
-          "wins": 3,
-          "places": 0,
-          "losses": 0,
-          "plPts": 10.82,
-          "plGbp": 108.2,
-          "roi": 3.6067,
-          "avgOdds": 4.61
         },
         {
           "name": "Doncaster",
@@ -1366,9 +1354,9 @@
           "wins": 4,
           "places": 1,
           "losses": 2,
-          "plPts": 8.53,
-          "plGbp": 85.3,
-          "roi": 1.3123,
+          "plPts": 8.4,
+          "plGbp": 84.0,
+          "roi": 1.4,
           "avgOdds": 4.71
         },
         {
@@ -1418,20 +1406,32 @@
           "plGbp": 68.2,
           "roi": 1.0492,
           "avgOdds": 2.81
+        },
+        {
+          "name": "Musselburgh",
+          "bets": 4,
+          "calculable": 4,
+          "wins": 2,
+          "places": 0,
+          "losses": 0,
+          "plPts": 6.5,
+          "plGbp": 65.0,
+          "roi": 1.625,
+          "avgOdds": 3.39
         }
       ],
       "betTypes": [
         {
           "name": "Win",
-          "bets": 93,
-          "calculable": 93,
-          "wins": 64,
+          "bets": 90,
+          "calculable": 90,
+          "wins": 62,
           "places": 0,
-          "losses": 16,
-          "plPts": 87.01,
-          "plGbp": 870.1,
-          "roi": 0.9614,
-          "avgOdds": 2.58
+          "losses": 15,
+          "plPts": 73.01,
+          "plGbp": 730.1,
+          "roi": 0.8344,
+          "avgOdds": 2.45
         },
         {
           "name": "Reverse Forecast",
@@ -1447,15 +1447,15 @@
         },
         {
           "name": "Each Way",
-          "bets": 21,
-          "calculable": 21,
-          "wins": 8,
+          "bets": 23,
+          "calculable": 23,
+          "wins": 10,
           "places": 8,
           "losses": 3,
-          "plPts": 17.18,
-          "plGbp": 171.8,
-          "roi": 1.2726,
-          "avgOdds": 8.14
+          "plPts": 21.45,
+          "plGbp": 214.5,
+          "roi": 1.65,
+          "avgOdds": 8.17
         },
         {
           "name": "Straight Forecast",
@@ -1471,6 +1471,21 @@
         }
       ],
       "recentBets": [
+        {
+          "date": "2026-08-14",
+          "time": "17:28",
+          "course": "Cork",
+          "horse": "Love Bomb",
+          "tipster": "The Tipping Station",
+          "betType": "Win",
+          "odds": 5.5,
+          "stakePts": 1.0,
+          "returnPts": 5.5,
+          "plPts": 4.5,
+          "plGbp": 45.0,
+          "result": "Won",
+          "calculable": true
+        },
         {
           "date": "2026-08-14",
           "time": "17:33",
@@ -1623,21 +1638,6 @@
         },
         {
           "date": "2026-08-14",
-          "time": "20:20",
-          "course": "Thirsk",
-          "horse": "Halimede",
-          "tipster": "The Tipping Station",
-          "betType": "Win",
-          "odds": 1.29,
-          "stakePts": 1.0,
-          "returnPts": 0.0,
-          "plPts": -1.0,
-          "plGbp": -10.0,
-          "result": "Lost",
-          "calculable": true
-        },
-        {
-          "date": "2026-08-14",
           "time": "20:25",
           "course": "Tramore",
           "horse": "Longway",
@@ -1654,21 +1654,6 @@
       ],
       "topWinners": [
         {
-          "date": "2026-08-03",
-          "time": "15:17",
-          "course": "Naas",
-          "horse": "Dandy Land",
-          "tipster": "The Tipping Station",
-          "betType": "Win",
-          "odds": 10.0,
-          "stakePts": 1.0,
-          "returnPts": 10.0,
-          "plPts": 9.0,
-          "plGbp": 90.0,
-          "result": "Won",
-          "calculable": true
-        },
-        {
           "date": "2026-08-05",
           "time": "19:20",
           "course": "Kempton",
@@ -1680,21 +1665,6 @@
           "returnPts": 7.02,
           "plPts": 6.02,
           "plGbp": 60.2,
-          "result": "Won",
-          "calculable": true
-        },
-        {
-          "date": "2026-08-05",
-          "time": "16:15",
-          "course": "Pontefract",
-          "horse": "Between The Sticks",
-          "tipster": "The Tipping Station",
-          "betType": "Win",
-          "odds": 7.0,
-          "stakePts": 1.0,
-          "returnPts": 7.0,
-          "plPts": 6.0,
-          "plGbp": 60.0,
           "result": "Won",
           "calculable": true
         },
@@ -1772,6 +1742,36 @@
           "plGbp": 50.0,
           "result": "Won",
           "calculable": true
+        },
+        {
+          "date": "2026-08-01",
+          "time": "14:13",
+          "course": "Newmarket",
+          "horse": "Havana Sprite",
+          "tipster": "The Tipping Station",
+          "betType": "Win",
+          "odds": 5.5,
+          "stakePts": 1.0,
+          "returnPts": 5.5,
+          "plPts": 4.5,
+          "plGbp": 45.0,
+          "result": "Won",
+          "calculable": true
+        },
+        {
+          "date": "2026-08-10",
+          "time": "18:27",
+          "course": "Ballinrobe",
+          "horse": "Chemdawg",
+          "tipster": "The Tipping Station",
+          "betType": "Win",
+          "odds": 5.5,
+          "stakePts": 1.0,
+          "returnPts": 5.5,
+          "plPts": 4.5,
+          "plGbp": 45.0,
+          "result": "Won",
+          "calculable": true
         }
       ]
     },
@@ -1782,7 +1782,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-08-14 20:37",
+      "updatedAt": "2026-08-14 20:59",
       "stats": {
         "bets": 367,
         "settled": 367,
