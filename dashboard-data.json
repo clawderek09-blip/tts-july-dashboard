@@ -4,28 +4,28 @@
   "subtitle": "Continuous proof view with August stacked above July.",
   "bankSize": 1000,
   "pointValue": 10,
-  "updatedAt": "2026-08-18 10:40",
+  "updatedAt": "2026-08-18 14:03",
   "cumulative": {
     "period": "Cumulative 2026",
-    "updatedAt": "2026-08-18 10:40",
+    "updatedAt": "2026-08-18 14:03",
     "stats": {
-      "bets": 512,
-      "settled": 512,
-      "calculable": 512,
+      "bets": 527,
+      "settled": 527,
+      "calculable": 527,
       "pendingPnl": 0,
-      "wins": 285,
-      "places": 67,
-      "losses": 90,
+      "wins": 293,
+      "places": 69,
+      "losses": 95,
       "voids": 70,
-      "stakePts": 473.5,
-      "stakeGbp": 4735.0,
-      "returnPts": 918.83,
-      "returnGbp": 9188.3,
-      "plPts": 445.33,
-      "plGbp": 4453.3,
-      "roi": 0.9405,
-      "strikeRate": 0.6448,
-      "placeRate": 0.7964
+      "stakePts": 487.5,
+      "stakeGbp": 4875.0,
+      "returnPts": 938.17,
+      "returnGbp": 9381.7,
+      "plPts": 450.67,
+      "plGbp": 4506.7,
+      "roi": 0.9245,
+      "strikeRate": 0.6411,
+      "placeRate": 0.7921
     },
     "daily": [
       {
@@ -399,13 +399,23 @@
         "roi": 0.9259
       },
       {
+        "date": "2026-08-15",
+        "label": "15 Aug",
+        "bets": 15,
+        "plPts": 5.34,
+        "plGbp": 53.4,
+        "runningPts": 438.23,
+        "runningGbp": 4382.3,
+        "roi": 0.3814
+      },
+      {
         "date": "2026-08-16",
         "label": "16 Aug",
         "bets": 12,
         "plPts": 6.26,
         "plGbp": 62.6,
-        "runningPts": 439.15,
-        "runningGbp": 4391.5,
+        "runningPts": 444.49,
+        "runningGbp": 4444.9,
         "roi": 0.5962
       },
       {
@@ -414,8 +424,8 @@
         "bets": 7,
         "plPts": 6.18,
         "plGbp": 61.8,
-        "runningPts": 445.33,
-        "runningGbp": 4453.3,
+        "runningPts": 450.67,
+        "runningGbp": 4506.7,
         "roi": 0.9508
       }
     ],
@@ -426,7 +436,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-08-18 10:40",
+      "updatedAt": "2026-08-18 14:03",
       "stats": {
         "bets": 367,
         "settled": 367,
@@ -1200,25 +1210,25 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "August 2026",
-      "updatedAt": "2026-08-18 10:40",
+      "updatedAt": "2026-08-18 14:03",
       "stats": {
-        "bets": 145,
-        "settled": 145,
-        "calculable": 145,
+        "bets": 160,
+        "settled": 160,
+        "calculable": 160,
         "pendingPnl": 0,
-        "wins": 93,
-        "places": 12,
-        "losses": 21,
+        "wins": 101,
+        "places": 14,
+        "losses": 26,
         "voids": 19,
-        "stakePts": 130.5,
-        "stakeGbp": 1305.0,
-        "returnPts": 267.81,
-        "returnGbp": 2678.1,
-        "plPts": 137.31,
-        "plGbp": 1373.1,
-        "roi": 1.0522,
-        "strikeRate": 0.7381,
-        "placeRate": 0.8333
+        "stakePts": 144.5,
+        "stakeGbp": 1445.0,
+        "returnPts": 287.15,
+        "returnGbp": 2871.5,
+        "plPts": 142.65,
+        "plGbp": 1426.5,
+        "roi": 0.9872,
+        "strikeRate": 0.7163,
+        "placeRate": 0.8156
       },
       "bestDay": {
         "date": "2026-08-07",
@@ -1342,13 +1352,23 @@
           "roi": 0.9259
         },
         {
+          "date": "2026-08-15",
+          "label": "15 Aug",
+          "bets": 15,
+          "plPts": 5.34,
+          "plGbp": 53.4,
+          "runningPts": 130.21,
+          "runningGbp": 1302.1,
+          "roi": 0.3814
+        },
+        {
           "date": "2026-08-16",
           "label": "16 Aug",
           "bets": 12,
           "plPts": 6.26,
           "plGbp": 62.6,
-          "runningPts": 131.13,
-          "runningGbp": 1311.3,
+          "runningPts": 136.47,
+          "runningGbp": 1364.7,
           "roi": 0.5962
         },
         {
@@ -1357,12 +1377,24 @@
           "bets": 7,
           "plPts": 6.18,
           "plGbp": 61.8,
-          "runningPts": 137.31,
-          "runningGbp": 1373.1,
+          "runningPts": 142.65,
+          "runningGbp": 1426.5,
           "roi": 0.9508
         }
       ],
       "courses": [
+        {
+          "name": "Newmarket",
+          "bets": 13,
+          "calculable": 13,
+          "wins": 9,
+          "places": 2,
+          "losses": 2,
+          "plPts": 12.9,
+          "plGbp": 129.0,
+          "roi": 0.9923,
+          "avgOdds": 2.66
+        },
         {
           "name": "Windsor",
           "bets": 8,
@@ -1376,30 +1408,6 @@
           "avgOdds": 3.21
         },
         {
-          "name": "Newmarket",
-          "bets": 10,
-          "calculable": 10,
-          "wins": 7,
-          "places": 1,
-          "losses": 2,
-          "plPts": 10.83,
-          "plGbp": 108.3,
-          "roi": 1.083,
-          "avgOdds": 2.95
-        },
-        {
-          "name": "Doncaster",
-          "bets": 5,
-          "calculable": 5,
-          "wins": 5,
-          "places": 0,
-          "losses": 0,
-          "plPts": 10.43,
-          "plGbp": 104.3,
-          "roi": 2.086,
-          "avgOdds": 3.09
-        },
-        {
           "name": "Cork",
           "bets": 7,
           "calculable": 7,
@@ -1410,6 +1418,18 @@
           "plGbp": 84.0,
           "roi": 1.4,
           "avgOdds": 4.71
+        },
+        {
+          "name": "Doncaster",
+          "bets": 9,
+          "calculable": 9,
+          "wins": 6,
+          "places": 0,
+          "losses": 3,
+          "plPts": 8.26,
+          "plGbp": 82.6,
+          "roi": 0.9178,
+          "avgOdds": 2.53
         },
         {
           "name": "Salisbury",
@@ -1463,15 +1483,15 @@
       "betTypes": [
         {
           "name": "Win",
-          "bets": 103,
-          "calculable": 103,
-          "wins": 71,
+          "bets": 109,
+          "calculable": 109,
+          "wins": 75,
           "places": 0,
-          "losses": 18,
-          "plPts": 81.96,
-          "plGbp": 819.6,
-          "roi": 0.8196,
-          "avgOdds": 2.47
+          "losses": 20,
+          "plPts": 82.86,
+          "plGbp": 828.6,
+          "roi": 0.7817,
+          "avgOdds": 2.42
         },
         {
           "name": "Reverse Forecast",
@@ -1487,15 +1507,15 @@
         },
         {
           "name": "Each Way",
-          "bets": 26,
-          "calculable": 26,
+          "bets": 28,
+          "calculable": 28,
           "wins": 10,
           "places": 11,
-          "losses": 3,
-          "plPts": 21.44,
-          "plGbp": 214.4,
-          "roi": 1.4786,
-          "avgOdds": 7.92
+          "losses": 5,
+          "plPts": 20.44,
+          "plGbp": 204.4,
+          "roi": 1.3187,
+          "avgOdds": 7.8
         },
         {
           "name": "Straight Forecast",
@@ -1822,7 +1842,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-08-18 10:40",
+      "updatedAt": "2026-08-18 14:03",
       "stats": {
         "bets": 367,
         "settled": 367,
