@@ -290,6 +290,149 @@ function proofCards(period) {
   `;
 }
 
+function festivalSparkline(daily = []) {
+  if (!daily.length) return `<div class="festival-spark empty">Awaiting imported festival bets</div>`;
+
+  const width = 280;
+  const height = 78;
+  const pad = 10;
+  const values = daily.map((item) => Number(item.runningPts || 0));
+  const min = Math.min(0, ...values);
+  const max = Math.max(0, ...values);
+  const span = max === min ? 1 : max - min;
+  const xStep = (width - pad * 2) / Math.max(daily.length - 1, 1);
+  const xFor = (idx) => (daily.length === 1 ? width - pad : pad + idx * xStep);
+  const yFor = (value) => height - pad - ((value - min) / span) * (height - pad * 2);
+  const points = daily.length === 1
+    ? `${pad},${yFor(values[0])} ${width - pad},${yFor(values[0])}`
+    : values.map((value, idx) => `${xFor(idx).toFixed(2)},${yFor(value).toFixed(2)}`).join(" ");
+  const area = `${pad},${height - pad} ${points} ${width - pad},${height - pad}`;
+
+  return `
+    <svg class="festival-spark" viewBox="0 0 ${width} ${height}" role="img" aria-label="Festival running profit and loss">
+      <polygon points="${area}" fill="rgba(0,217,255,0.14)"></polygon>
+      <polyline points="${points}" fill="none" stroke="var(--gold)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      ${values.map((value, idx) => `<circle cx="${xFor(idx).toFixed(2)}" cy="${yFor(value).toFixed(2)}" r="3.4" fill="${value >= 0 ? "var(--green)" : "var(--red)"}"></circle>`).join("")}
+    </svg>
+  `;
+}
+
+function festivalCard(festival, index) {
+  const stats = festival.stats || {};
+  const best = festival.bestReturn;
+  const hasData = festival.hasData && Number(stats.bets || 0) > 0;
+  const featured = index === 0 ? "is-featured" : "";
+  const resultLine = hasData
+    ? `${stats.wins}W ${stats.places}P ${stats.losses}L · ${percent(stats.placeRate)} win/place`
+    : "Ready to populate when festival tips are imported";
+
+  return `
+    <article class="festival-card ${featured} ${hasData ? "" : "is-empty"}">
+      <div class="festival-card-top">
+        <div>
+          <span class="festival-status">${festival.status}</span>
+          <h3>${festival.name}</h3>
+          <p>${festival.dateLabel} · ${festival.venue}</p>
+        </div>
+        <span class="festival-index">${String(index + 1).padStart(2, "0")}</span>
+      </div>
+
+      <div class="festival-score">
+        <strong class="${hasData ? stats.plGbp >= 0 ? "positive" : "negative" : "neutral"}">${hasData ? signedPoints(stats.plPts) : "TBC"}</strong>
+        <span>${hasData ? `${signedMoney(stats.plGbp)} · ${percent(stats.roi)} ROI` : festival.angle}</span>
+      </div>
+
+      <div class="festival-metrics">
+        <span><strong>${plain.format(stats.bets || 0)}</strong>Bets</span>
+        <span><strong>${plain.format(stats.wins || 0)}</strong>Wins</span>
+        <span><strong>${plain.format(stats.places || 0)}</strong>Places</span>
+        <span><strong>${hasData ? money(stats.stakeGbp) : "-"}</strong>Staked</span>
+      </div>
+
+      <div class="festival-chart">${festivalSparkline(festival.daily || [])}</div>
+
+      <div class="festival-highlight">
+        <span>${hasData && best ? "Best Return" : "Marketing Slot"}</span>
+        <strong>${hasData && best ? `${best.horse} · ${signedPoints(best.plPts)}` : festival.angle}</strong>
+        <small>${hasData && best ? `${best.betType} at ${fractionalOdds(best.odds, best.betType)} · ${best.date.slice(5)}` : resultLine}</small>
+      </div>
+
+      ${hasData ? `
+        <details class="festival-proof">
+          <summary>View festival bets</summary>
+          <div class="festival-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Horse</th>
+                  <th>Bet</th>
+                  <th>Odds</th>
+                  <th>Result</th>
+                  <th>P/L</th>
+                </tr>
+              </thead>
+              <tbody>${(festival.recentBets || []).map((bet) => `
+                <tr>
+                  <td>${bet.date.slice(5)}</td>
+                  <td>${bet.horse}</td>
+                  <td>${bet.betType}</td>
+                  <td>${fractionalOdds(bet.odds, bet.betType)}</td>
+                  <td><span class="result-badge ${statusClass(bet.result)}">${bet.result}</span></td>
+                  <td><span class="${bet.plGbp >= 0 ? "positive" : "negative"}">${signedPoints(bet.plPts)}</span></td>
+                </tr>
+              `).join("")}</tbody>
+            </table>
+          </div>
+        </details>
+      ` : ""}
+    </article>
+  `;
+}
+
+function festivalsSection(festivals = []) {
+  if (!festivals.length) return "";
+
+  const live = festivals.find((festival) => festival.hasData) || festivals[0];
+  const stats = live.stats || {};
+
+  return `
+    <section class="section-heading festival-heading" id="festivals">
+      <div>
+        <h2>Festival Form</h2>
+        <span>Course windows built for proof-led marketing</span>
+      </div>
+      <span class="pill gold">${live.name}: ${stats.bets || 0} bets</span>
+    </section>
+
+    <section class="festival-hero-band">
+      <div>
+        <span>Latest Festival Spotlight</span>
+        <h3>${live.name}</h3>
+        <p>${live.angle}. ${live.hasData ? `${signedPoints(stats.plPts)} from ${stats.bets} tracked selections.` : "This slot will fill from the same workbook source as soon as tips are logged."}</p>
+      </div>
+      <div class="festival-summary">
+        <span>
+          <strong class="${live.hasData && stats.plGbp >= 0 ? "positive" : "neutral"}">${live.hasData ? signedPoints(stats.plPts) : "TBC"}</strong>
+          Net P/L
+        </span>
+        <span>
+          <strong>${live.hasData ? percent(stats.roi) : "-"}</strong>
+          ROI
+        </span>
+        <span>
+          <strong>${plain.format(stats.bets || 0)}</strong>
+          Bets
+        </span>
+      </div>
+    </section>
+
+    <section class="festival-grid">
+      ${festivals.map(festivalCard).join("")}
+    </section>
+  `;
+}
+
 function monthSection(period, index) {
   const stats = period.stats;
   const periodMonth = String(period.period || "").split(" ")[0] || "Current";
@@ -298,7 +441,7 @@ function monthSection(period, index) {
   const lostDeg = stats.settled ? ((stats.wins + stats.places + stats.losses) / stats.settled) * 360 : 0;
 
   return `
-    <section class="month-block ${index === 0 ? "is-current" : ""}">
+    <section class="month-block ${index === 0 ? "is-current" : ""}" ${index === 0 ? 'id="months"' : ""}>
       <div class="section-heading">
         <h2>${period.period}</h2>
         <span>${index === 0 ? "Current month" : "Archived month"} · values-only export</span>
@@ -400,6 +543,7 @@ function render(data) {
   const payload = normalisePayload(data);
   const stats = payload.cumulative.stats;
   const currentPeriod = payload.periods[0] || payload.cumulative;
+  const archivedPeriods = payload.periods.slice(1);
   const currentStats = currentPeriod.stats;
 
   app.innerHTML = `
@@ -426,9 +570,20 @@ function render(data) {
       </div>
     </section>
 
-    ${payload.periods.map(monthSection).join("")}
+    <nav class="section-switcher" aria-label="Dashboard sections">
+      <a href="#app">Overview</a>
+      <a href="#months">Current Month</a>
+      <a href="#festivals">Festival Form</a>
+      <a href="#cumulative">Cumulative</a>
+    </nav>
 
-    <section class="section-heading">
+    ${monthSection(currentPeriod, 0)}
+
+    ${festivalsSection(payload.festivals || [])}
+
+    ${archivedPeriods.map((period, index) => monthSection(period, index + 1)).join("")}
+
+    <section class="section-heading" id="cumulative">
       <h2>Cumulative P/L</h2>
       <span>All months combined</span>
     </section>
