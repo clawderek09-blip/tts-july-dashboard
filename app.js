@@ -257,13 +257,14 @@ function monthCards(period) {
 
 function proofCards(period) {
   const stats = period.stats;
+  const periodMonth = String(period.period || "current month").split(" ")[0] || "current month";
   if (!period.bestDay || !period.worstDay) {
     return `
       <section class="proof-grid single">
         <article class="proof-card">
           <span>Monthly Status</span>
           <strong class="neutral">Ready</strong>
-          <p>${period.period} is set up as a separate monthly tracker. The first August selections will populate the tables, curve, and breakdowns here.</p>
+          <p>${period.period} is set up as a separate monthly tracker. The first ${periodMonth} selections will populate the tables, curve, and breakdowns here.</p>
         </article>
       </section>
     `;
@@ -454,7 +455,7 @@ function monthSection(period, index) {
           <div class="panel-top">
             <div>
               <h3>${periodMonth} P/L Curve</h3>
-              <p>${stats.bets ? `${period.period} is ${signedPoints(stats.plPts)} (${signedMoney(stats.plGbp)}) from ${stats.calculable} priced selections.` : "Awaiting the first August results."}</p>
+              <p>${stats.bets ? `${period.period} is ${signedPoints(stats.plPts)} (${signedMoney(stats.plGbp)}) from ${stats.calculable} priced selections.` : `Awaiting the first ${periodMonth} results.`}</p>
             </div>
             <span class="pill cyan">${signedPoints(stats.plPts)}</span>
           </div>
@@ -545,6 +546,7 @@ function render(data) {
   const currentPeriod = payload.periods[0] || payload.cumulative;
   const archivedPeriods = payload.periods.slice(1);
   const currentStats = currentPeriod.stats;
+  const currentMonth = String(currentPeriod.period || "Current").split(" ")[0] || "Current";
 
   app.innerHTML = `
     <section class="hero">
@@ -561,7 +563,7 @@ function render(data) {
           <p>Month by month tracked tips. Fully transparent. Scroll down to the bottom to see cumulative PNL.</p>
         </div>
         <div class="hero-meta">
-          <span class="pill cyan">${currentStats.bets} August bets</span>
+          <span class="pill cyan">${currentStats.bets} ${currentMonth} bets</span>
           <span class="pill gold">${money(payload.bankSize)} bank</span>
           <span class="pill">1pt = ${money(payload.pointValue)}</span>
           <span class="pill">${currentStats.calculable} priced for P/L</span>
@@ -599,7 +601,7 @@ function render(data) {
       <div class="panel-top">
         <div>
           <h3>Running P/L Across Months</h3>
-          <p>July remains intact underneath. August starts above it and will extend the same public proof flow.</p>
+          <p>Earlier months remain intact underneath. The current month extends the same public proof flow.</p>
         </div>
         <span class="pill cyan">${signedPoints(stats.plPts)}</span>
       </div>
