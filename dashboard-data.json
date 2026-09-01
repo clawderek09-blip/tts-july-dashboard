@@ -4,28 +4,28 @@
   "subtitle": "Continuous proof view with September stacked above August and July.",
   "bankSize": 1000,
   "pointValue": 10,
-  "updatedAt": "2026-09-01 20:14",
+  "updatedAt": "2026-09-01 20:16",
   "cumulative": {
     "period": "Cumulative 2026",
-    "updatedAt": "2026-09-01 20:14",
+    "updatedAt": "2026-09-01 20:16",
     "stats": {
-      "bets": 694,
-      "settled": 694,
-      "calculable": 694,
+      "bets": 695,
+      "settled": 695,
+      "calculable": 695,
       "pendingPnl": 0,
       "wins": 383,
-      "places": 94,
+      "places": 95,
       "losses": 130,
       "voids": 87,
-      "stakePts": 638.0,
-      "stakeGbp": 6380.0,
-      "returnPts": 1242.32,
-      "returnGbp": 12423.2,
+      "stakePts": 638.5,
+      "stakeGbp": 6385.0,
+      "returnPts": 1242.82,
+      "returnGbp": 12428.2,
       "plPts": 604.32,
       "plGbp": 6043.2,
-      "roi": 0.9472,
-      "strikeRate": 0.631,
-      "placeRate": 0.7858
+      "roi": 0.9465,
+      "strikeRate": 0.6299,
+      "placeRate": 0.7862
     },
     "daily": [
       {
@@ -541,12 +541,12 @@
       {
         "date": "2026-09-01",
         "label": "1 Sep",
-        "bets": 13,
+        "bets": 14,
         "plPts": 9.49,
         "plGbp": 94.9,
         "runningPts": 604.32,
         "runningGbp": 6043.2,
-        "roi": 0.7908
+        "roi": 0.7592
       }
     ],
     "bestMonth": {
@@ -556,7 +556,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-09-01 20:14",
+      "updatedAt": "2026-09-01 20:16",
       "stats": {
         "bets": 367,
         "settled": 367,
@@ -2060,56 +2060,56 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "September 2026",
-      "updatedAt": "2026-09-01 20:14",
+      "updatedAt": "2026-09-01 20:16",
       "stats": {
-        "bets": 13,
-        "settled": 13,
-        "calculable": 13,
+        "bets": 14,
+        "settled": 14,
+        "calculable": 14,
         "pendingPnl": 0,
         "wins": 7,
-        "places": 1,
+        "places": 2,
         "losses": 3,
         "voids": 2,
-        "stakePts": 12.0,
-        "stakeGbp": 120.0,
-        "returnPts": 21.49,
-        "returnGbp": 214.9,
+        "stakePts": 12.5,
+        "stakeGbp": 125.0,
+        "returnPts": 21.99,
+        "returnGbp": 219.9,
         "plPts": 9.49,
         "plGbp": 94.9,
-        "roi": 0.7908,
-        "strikeRate": 0.6364,
-        "placeRate": 0.7273
+        "roi": 0.7592,
+        "strikeRate": 0.5833,
+        "placeRate": 0.75
       },
       "bestDay": {
         "date": "2026-09-01",
         "label": "1 Sep",
-        "bets": 13,
+        "bets": 14,
         "plPts": 9.49,
         "plGbp": 94.9,
         "runningPts": 9.49,
         "runningGbp": 94.9,
-        "roi": 0.7908
+        "roi": 0.7592
       },
       "worstDay": {
         "date": "2026-09-01",
         "label": "1 Sep",
-        "bets": 13,
+        "bets": 14,
         "plPts": 9.49,
         "plGbp": 94.9,
         "runningPts": 9.49,
         "runningGbp": 94.9,
-        "roi": 0.7908
+        "roi": 0.7592
       },
       "daily": [
         {
           "date": "2026-09-01",
           "label": "1 Sep",
-          "bets": 13,
+          "bets": 14,
           "plPts": 9.49,
           "plGbp": 94.9,
           "runningPts": 9.49,
           "runningGbp": 94.9,
-          "roi": 0.7908
+          "roi": 0.7592
         }
       ],
       "courses": [
@@ -2151,15 +2151,15 @@
         },
         {
           "name": "Wolverhampton",
-          "bets": 1,
-          "calculable": 1,
+          "bets": 2,
+          "calculable": 2,
           "wins": 0,
-          "places": 0,
+          "places": 1,
           "losses": 1,
           "plPts": -1.0,
           "plGbp": -10.0,
-          "roi": -1.0,
-          "avgOdds": 2.2
+          "roi": -0.6667,
+          "avgOdds": 4.1
         }
       ],
       "betTypes": [
@@ -2177,14 +2177,14 @@
         },
         {
           "name": "Each Way",
-          "bets": 2,
-          "calculable": 2,
+          "bets": 3,
+          "calculable": 3,
           "wins": 1,
-          "places": 1,
+          "places": 2,
           "losses": 0,
           "plPts": 1.5,
           "plGbp": 15.0,
-          "roi": 1.5,
+          "roi": 1.0,
           "avgOdds": 6.0
         },
         {
@@ -2201,21 +2201,6 @@
         }
       ],
       "recentBets": [
-        {
-          "date": "2026-09-01",
-          "time": "14:20",
-          "course": "Lingfield",
-          "horse": "Divot",
-          "tipster": "The Tipping Station",
-          "betType": "Cover/Insure",
-          "odds": 0.0,
-          "stakePts": 1.0,
-          "returnPts": 1.0,
-          "plPts": 0.0,
-          "plGbp": 0.0,
-          "result": "Void",
-          "calculable": true
-        },
         {
           "date": "2026-09-01",
           "time": "14:30",
@@ -2380,6 +2365,21 @@
           "plGbp": 45.0,
           "result": "Won",
           "calculable": true
+        },
+        {
+          "date": "2026-09-01",
+          "time": "19:30",
+          "course": "Wolverhampton",
+          "horse": "Henery Hawk",
+          "tipster": "The Tipping Station",
+          "betType": "Each Way",
+          "odds": 6.0,
+          "stakePts": 0.5,
+          "returnPts": 0.5,
+          "plPts": 0.0,
+          "plGbp": 0.0,
+          "result": "Placed",
+          "calculable": true
         }
       ],
       "topWinners": [
@@ -2497,7 +2497,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "August 2026",
-      "updatedAt": "2026-09-01 20:14",
+      "updatedAt": "2026-09-01 20:16",
       "stats": {
         "bets": 314,
         "settled": 314,
@@ -3239,7 +3239,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-09-01 20:14",
+      "updatedAt": "2026-09-01 20:16",
       "stats": {
         "bets": 367,
         "settled": 367,
