@@ -563,10 +563,8 @@ function render(data) {
           <p>Month by month tracked tips. Fully transparent. Scroll down to the bottom to see cumulative PNL.</p>
         </div>
         <div class="hero-meta">
-          <span class="pill cyan">${currentStats.bets} ${currentMonth} bets</span>
           <span class="pill gold">${money(payload.bankSize)} bank</span>
           <span class="pill">1pt = ${money(payload.pointValue)}</span>
-          <span class="pill">${currentStats.calculable} priced for P/L</span>
           <span class="pill">Updated ${payload.updatedAt}</span>
         </div>
       </div>
