@@ -4,10 +4,10 @@
   "subtitle": "Continuous proof view with September stacked above August and July.",
   "bankSize": 1000,
   "pointValue": 10,
-  "updatedAt": "2026-09-04 21:30",
+  "updatedAt": "2026-09-04 22:30",
   "cumulative": {
     "period": "Cumulative 2026",
-    "updatedAt": "2026-09-04 21:30",
+    "updatedAt": "2026-09-04 22:30",
     "stats": {
       "bets": 734,
       "settled": 734,
@@ -17,13 +17,13 @@
       "places": 99,
       "losses": 135,
       "voids": 91,
-      "stakePts": 673.5,
-      "stakeGbp": 6735.0,
-      "returnPts": 1309.83,
-      "returnGbp": 13098.3,
-      "plPts": 636.33,
-      "plGbp": 6363.3,
-      "roi": 0.9448,
+      "stakePts": 672.5,
+      "stakeGbp": 6725.0,
+      "returnPts": 1301.83,
+      "returnGbp": 13018.3,
+      "plPts": 629.33,
+      "plGbp": 6293.3,
+      "roi": 0.9358,
       "strikeRate": 0.6361,
       "placeRate": 0.79
     },
@@ -563,21 +563,21 @@
         "date": "2026-09-03",
         "label": "3 Sep",
         "bets": 23,
-        "plPts": 19.13,
-        "plGbp": 191.3,
-        "runningPts": 623.45,
-        "runningGbp": 6234.5,
-        "roi": 0.9332
+        "plPts": 15.63,
+        "plGbp": 156.3,
+        "runningPts": 619.95,
+        "runningGbp": 6199.5,
+        "roi": 0.7815
       },
       {
         "date": "2026-09-04",
         "label": "4 Sep",
         "bets": 16,
-        "plPts": 12.88,
-        "plGbp": 128.8,
-        "runningPts": 636.33,
-        "runningGbp": 6363.3,
-        "roi": 0.8883
+        "plPts": 9.38,
+        "plGbp": 93.8,
+        "runningPts": 629.33,
+        "runningGbp": 6293.3,
+        "roi": 0.67
       }
     ],
     "bestMonth": {
@@ -587,7 +587,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-09-04 21:30",
+      "updatedAt": "2026-09-04 22:30",
       "stats": {
         "bets": 367,
         "settled": 367,
@@ -2091,7 +2091,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "September 2026",
-      "updatedAt": "2026-09-04 21:30",
+      "updatedAt": "2026-09-04 22:30",
       "stats": {
         "bets": 53,
         "settled": 53,
@@ -2101,13 +2101,13 @@
         "places": 6,
         "losses": 8,
         "voids": 6,
-        "stakePts": 47.5,
-        "stakeGbp": 475.0,
-        "returnPts": 89.0,
-        "returnGbp": 890.0,
-        "plPts": 41.5,
-        "plGbp": 415.0,
-        "roi": 0.8737,
+        "stakePts": 46.5,
+        "stakeGbp": 465.0,
+        "returnPts": 81.0,
+        "returnGbp": 810.0,
+        "plPts": 34.5,
+        "plGbp": 345.0,
+        "roi": 0.7419,
         "strikeRate": 0.7021,
         "placeRate": 0.8298
       },
@@ -2115,21 +2115,21 @@
         "date": "2026-09-03",
         "label": "3 Sep",
         "bets": 23,
-        "plPts": 19.13,
-        "plGbp": 191.3,
-        "runningPts": 28.62,
-        "runningGbp": 286.2,
-        "roi": 0.9332
+        "plPts": 15.63,
+        "plGbp": 156.3,
+        "runningPts": 25.12,
+        "runningGbp": 251.2,
+        "roi": 0.7815
       },
       "worstDay": {
-        "date": "2026-09-01",
-        "label": "1 Sep",
-        "bets": 14,
-        "plPts": 9.49,
-        "plGbp": 94.9,
-        "runningPts": 9.49,
-        "runningGbp": 94.9,
-        "roi": 0.7592
+        "date": "2026-09-04",
+        "label": "4 Sep",
+        "bets": 16,
+        "plPts": 9.38,
+        "plGbp": 93.8,
+        "runningPts": 34.5,
+        "runningGbp": 345.0,
+        "roi": 0.67
       },
       "daily": [
         {
@@ -2157,21 +2157,21 @@
           "date": "2026-09-03",
           "label": "3 Sep",
           "bets": 23,
-          "plPts": 19.13,
-          "plGbp": 191.3,
-          "runningPts": 28.62,
-          "runningGbp": 286.2,
-          "roi": 0.9332
+          "plPts": 15.63,
+          "plGbp": 156.3,
+          "runningPts": 25.12,
+          "runningGbp": 251.2,
+          "roi": 0.7815
         },
         {
           "date": "2026-09-04",
           "label": "4 Sep",
           "bets": 16,
-          "plPts": 12.88,
-          "plGbp": 128.8,
-          "runningPts": 41.5,
-          "runningGbp": 415.0,
-          "roi": 0.8883
+          "plPts": 9.38,
+          "plGbp": 93.8,
+          "runningPts": 34.5,
+          "runningGbp": 345.0,
+          "roi": 0.67
         }
       ],
       "courses": [
@@ -2182,22 +2182,10 @@
           "wins": 6,
           "places": 1,
           "losses": 1,
-          "plPts": 9.73,
-          "plGbp": 97.3,
-          "roi": 1.2163,
+          "plPts": 6.23,
+          "plGbp": 62.3,
+          "roi": 0.8307,
           "avgOdds": 3.8
-        },
-        {
-          "name": "Newcastle",
-          "bets": 6,
-          "calculable": 6,
-          "wins": 5,
-          "places": 0,
-          "losses": 1,
-          "plPts": 7.47,
-          "plGbp": 74.7,
-          "roi": 1.3582,
-          "avgOdds": 2.59
         },
         {
           "name": "Gowran Park",
@@ -2248,6 +2236,18 @@
           "avgOdds": 3.63
         },
         {
+          "name": "Newcastle",
+          "bets": 6,
+          "calculable": 6,
+          "wins": 5,
+          "places": 0,
+          "losses": 1,
+          "plPts": 3.97,
+          "plGbp": 39.7,
+          "roi": 0.794,
+          "avgOdds": 2.59
+        },
+        {
           "name": "Kempton",
           "bets": 3,
           "calculable": 3,
@@ -2275,27 +2275,27 @@
       "betTypes": [
         {
           "name": "Win",
-          "bets": 34,
-          "calculable": 34,
-          "wins": 25,
+          "bets": 32,
+          "calculable": 32,
+          "wins": 23,
           "places": 0,
           "losses": 4,
-          "plPts": 31.82,
-          "plGbp": 318.2,
-          "roi": 0.9642,
-          "avgOdds": 2.37
+          "plPts": 21.82,
+          "plGbp": 218.2,
+          "roi": 0.7039,
+          "avgOdds": 2.07
         },
         {
           "name": "Each Way",
-          "bets": 9,
-          "calculable": 9,
-          "wins": 3,
+          "bets": 11,
+          "calculable": 11,
+          "wins": 5,
           "places": 6,
           "losses": 0,
-          "plPts": 4.84,
-          "plGbp": 48.4,
-          "roi": 1.0756,
-          "avgOdds": 6.22
+          "plPts": 7.84,
+          "plGbp": 78.4,
+          "roi": 1.4255,
+          "avgOdds": 6.18
         },
         {
           "name": "Straight Forecast",
@@ -2329,12 +2329,12 @@
           "course": "Haydock",
           "horse": "Kodi Lion",
           "tipster": "The Tipping Station",
-          "betType": "Win",
+          "betType": "Each Way",
           "odds": 6.0,
-          "stakePts": 1.0,
-          "returnPts": 6.0,
-          "plPts": 5.0,
-          "plGbp": 50.0,
+          "stakePts": 0.5,
+          "returnPts": 2.0,
+          "plPts": 1.5,
+          "plGbp": 15.0,
           "result": "Won",
           "calculable": true
         },
@@ -2506,36 +2506,6 @@
       ],
       "topWinners": [
         {
-          "date": "2026-09-03",
-          "time": "17:10",
-          "course": "Newcastle",
-          "horse": "Asadjumeirah",
-          "tipster": "The Tipping Station",
-          "betType": "Win",
-          "odds": 6.0,
-          "stakePts": 1.0,
-          "returnPts": 6.0,
-          "plPts": 5.0,
-          "plGbp": 50.0,
-          "result": "Won",
-          "calculable": true
-        },
-        {
-          "date": "2026-09-04",
-          "time": "15:15",
-          "course": "Haydock",
-          "horse": "Kodi Lion",
-          "tipster": "The Tipping Station",
-          "betType": "Win",
-          "odds": 6.0,
-          "stakePts": 1.0,
-          "returnPts": 6.0,
-          "plPts": 5.0,
-          "plGbp": 50.0,
-          "result": "Won",
-          "calculable": true
-        },
-        {
           "date": "2026-09-01",
           "time": "17:32",
           "course": "Gowran Park",
@@ -2624,6 +2594,36 @@
           "plGbp": 16.5,
           "result": "Won",
           "calculable": true
+        },
+        {
+          "date": "2026-09-04",
+          "time": "13:40",
+          "course": "Bangor-on-Dee",
+          "horse": "Hoe Joly Smoke",
+          "tipster": "The Tipping Station",
+          "betType": "Win",
+          "odds": 2.63,
+          "stakePts": 1.0,
+          "returnPts": 2.63,
+          "plPts": 1.63,
+          "plGbp": 16.3,
+          "result": "Won",
+          "calculable": true
+        },
+        {
+          "date": "2026-09-01",
+          "time": "15:00",
+          "course": "Gowran Park",
+          "horse": "Starborn Legend",
+          "tipster": "The Tipping Station",
+          "betType": "Win",
+          "odds": 2.5,
+          "stakePts": 1.0,
+          "returnPts": 2.5,
+          "plPts": 1.5,
+          "plGbp": 15.0,
+          "result": "Won",
+          "calculable": true
         }
       ]
     },
@@ -2634,7 +2634,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "August 2026",
-      "updatedAt": "2026-09-04 21:30",
+      "updatedAt": "2026-09-04 22:30",
       "stats": {
         "bets": 314,
         "settled": 314,
@@ -3376,7 +3376,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-09-04 21:30",
+      "updatedAt": "2026-09-04 22:30",
       "stats": {
         "bets": 367,
         "settled": 367,
