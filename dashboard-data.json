@@ -4,28 +4,28 @@
   "subtitle": "Continuous proof view with September stacked above August and July.",
   "bankSize": 1000,
   "pointValue": 10,
-  "updatedAt": "2026-09-11 09:24",
+  "updatedAt": "2026-09-11 10:02",
   "cumulative": {
     "period": "Cumulative 2026",
-    "updatedAt": "2026-09-11 09:24",
+    "updatedAt": "2026-09-11 10:02",
     "stats": {
-      "bets": 775,
-      "settled": 775,
-      "calculable": 775,
+      "bets": 791,
+      "settled": 791,
+      "calculable": 791,
       "pendingPnl": 0,
-      "wins": 434,
-      "places": 100,
-      "losses": 147,
-      "voids": 94,
-      "stakePts": 710.0,
-      "stakeGbp": 7100.0,
-      "returnPts": 1363.99,
-      "returnGbp": 13639.9,
-      "plPts": 653.99,
-      "plGbp": 6539.9,
-      "roi": 0.9211,
-      "strikeRate": 0.6373,
-      "placeRate": 0.7841
+      "wins": 441,
+      "places": 105,
+      "losses": 148,
+      "voids": 97,
+      "stakePts": 723.0,
+      "stakeGbp": 7230.0,
+      "returnPts": 1384.44,
+      "returnGbp": 13844.4,
+      "plPts": 661.44,
+      "plGbp": 6614.4,
+      "roi": 0.9149,
+      "strikeRate": 0.6354,
+      "placeRate": 0.7867
     },
     "daily": [
       {
@@ -580,13 +580,23 @@
         "roi": 0.67
       },
       {
+        "date": "2026-09-05",
+        "label": "5 Sep",
+        "bets": 11,
+        "plPts": 7.08,
+        "plGbp": 70.8,
+        "runningPts": 636.41,
+        "runningGbp": 6364.1,
+        "roi": 0.708
+      },
+      {
         "date": "2026-09-07",
         "label": "7 Sep",
         "bets": 15,
         "plPts": 9.19,
         "plGbp": 91.9,
-        "runningPts": 638.52,
-        "runningGbp": 6385.2,
+        "runningPts": 645.6,
+        "runningGbp": 6456.0,
         "roi": 0.6564
       },
       {
@@ -595,9 +605,19 @@
         "bets": 14,
         "plPts": 12.06,
         "plGbp": 120.6,
-        "runningPts": 650.58,
-        "runningGbp": 6505.8,
+        "runningPts": 657.66,
+        "runningGbp": 6576.6,
         "roi": 0.9277
+      },
+      {
+        "date": "2026-09-09",
+        "label": "9 Sep",
+        "bets": 5,
+        "plPts": 0.37,
+        "plGbp": 3.7,
+        "runningPts": 658.03,
+        "runningGbp": 6580.3,
+        "roi": 0.1233
       },
       {
         "date": "2026-09-10",
@@ -605,8 +625,8 @@
         "bets": 12,
         "plPts": 3.41,
         "plGbp": 34.1,
-        "runningPts": 653.99,
-        "runningGbp": 6539.9,
+        "runningPts": 661.44,
+        "runningGbp": 6614.4,
         "roi": 0.3248
       }
     ],
@@ -617,7 +637,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-09-11 09:24",
+      "updatedAt": "2026-09-11 10:02",
       "stats": {
         "bets": 367,
         "settled": 367,
@@ -2121,25 +2141,25 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "September 2026",
-      "updatedAt": "2026-09-11 09:24",
+      "updatedAt": "2026-09-11 10:02",
       "stats": {
-        "bets": 94,
-        "settled": 94,
-        "calculable": 94,
+        "bets": 110,
+        "settled": 110,
+        "calculable": 110,
         "pendingPnl": 0,
-        "wins": 58,
-        "places": 7,
-        "losses": 20,
-        "voids": 9,
-        "stakePts": 84.0,
-        "stakeGbp": 840.0,
-        "returnPts": 143.16,
-        "returnGbp": 1431.6,
-        "plPts": 59.16,
-        "plGbp": 591.6,
-        "roi": 0.7043,
-        "strikeRate": 0.6824,
-        "placeRate": 0.7647
+        "wins": 65,
+        "places": 12,
+        "losses": 21,
+        "voids": 12,
+        "stakePts": 97.0,
+        "stakeGbp": 970.0,
+        "returnPts": 163.61,
+        "returnGbp": 1636.1,
+        "plPts": 66.61,
+        "plGbp": 666.1,
+        "roi": 0.6867,
+        "strikeRate": 0.6633,
+        "placeRate": 0.7857
       },
       "bestDay": {
         "date": "2026-09-03",
@@ -2152,14 +2172,14 @@
         "roi": 0.7815
       },
       "worstDay": {
-        "date": "2026-09-10",
-        "label": "10 Sep",
-        "bets": 12,
-        "plPts": 3.41,
-        "plGbp": 34.1,
-        "runningPts": 59.16,
-        "runningGbp": 591.6,
-        "roi": 0.3248
+        "date": "2026-09-09",
+        "label": "9 Sep",
+        "bets": 5,
+        "plPts": 0.37,
+        "plGbp": 3.7,
+        "runningPts": 63.2,
+        "runningGbp": 632.0,
+        "roi": 0.1233
       },
       "daily": [
         {
@@ -2204,13 +2224,23 @@
           "roi": 0.67
         },
         {
+          "date": "2026-09-05",
+          "label": "5 Sep",
+          "bets": 11,
+          "plPts": 7.08,
+          "plGbp": 70.8,
+          "runningPts": 41.58,
+          "runningGbp": 415.8,
+          "roi": 0.708
+        },
+        {
           "date": "2026-09-07",
           "label": "7 Sep",
           "bets": 15,
           "plPts": 9.19,
           "plGbp": 91.9,
-          "runningPts": 43.69,
-          "runningGbp": 436.9,
+          "runningPts": 50.77,
+          "runningGbp": 507.7,
           "roi": 0.6564
         },
         {
@@ -2219,9 +2249,19 @@
           "bets": 14,
           "plPts": 12.06,
           "plGbp": 120.6,
-          "runningPts": 55.75,
-          "runningGbp": 557.5,
+          "runningPts": 62.83,
+          "runningGbp": 628.3,
           "roi": 0.9277
+        },
+        {
+          "date": "2026-09-09",
+          "label": "9 Sep",
+          "bets": 5,
+          "plPts": 0.37,
+          "plGbp": 3.7,
+          "runningPts": 63.2,
+          "runningGbp": 632.0,
+          "roi": 0.1233
         },
         {
           "date": "2026-09-10",
@@ -2229,12 +2269,24 @@
           "bets": 12,
           "plPts": 3.41,
           "plGbp": 34.1,
-          "runningPts": 59.16,
-          "runningGbp": 591.6,
+          "runningPts": 66.61,
+          "runningGbp": 666.1,
           "roi": 0.3248
         }
       ],
       "courses": [
+        {
+          "name": "Haydock",
+          "bets": 12,
+          "calculable": 12,
+          "wins": 8,
+          "places": 1,
+          "losses": 1,
+          "plPts": 9.23,
+          "plGbp": 92.3,
+          "roi": 0.923,
+          "avgOdds": 3.72
+        },
         {
           "name": "Catterick",
           "bets": 5,
@@ -2258,18 +2310,6 @@
           "plGbp": 66.0,
           "roi": 1.2,
           "avgOdds": 2.85
-        },
-        {
-          "name": "Haydock",
-          "bets": 9,
-          "calculable": 9,
-          "wins": 6,
-          "places": 1,
-          "losses": 1,
-          "plPts": 6.23,
-          "plGbp": 62.3,
-          "roi": 0.8307,
-          "avgOdds": 3.8
         },
         {
           "name": "Gowran Park",
@@ -2335,27 +2375,39 @@
       "betTypes": [
         {
           "name": "Win",
-          "bets": 58,
-          "calculable": 58,
-          "wins": 38,
+          "bets": 60,
+          "calculable": 60,
+          "wins": 40,
           "places": 0,
           "losses": 12,
-          "plPts": 32.15,
-          "plGbp": 321.5,
-          "roi": 0.5741,
-          "avgOdds": 2.1
+          "plPts": 32.62,
+          "plGbp": 326.2,
+          "roi": 0.5624,
+          "avgOdds": 2.06
         },
         {
           "name": "Each Way",
-          "bets": 17,
-          "calculable": 17,
-          "wins": 8,
-          "places": 7,
+          "bets": 23,
+          "calculable": 23,
+          "wins": 9,
+          "places": 12,
           "losses": 2,
-          "plPts": 11.34,
-          "plGbp": 113.4,
-          "roi": 1.26,
-          "avgOdds": 6.03
+          "plPts": 13.07,
+          "plGbp": 130.7,
+          "roi": 1.0892,
+          "avgOdds": 6.22
+        },
+        {
+          "name": "Cover/Insure",
+          "bets": 20,
+          "calculable": 20,
+          "wins": 10,
+          "places": 0,
+          "losses": 6,
+          "plPts": 7.39,
+          "plGbp": 73.9,
+          "roi": 0.3695,
+          "avgOdds": 2.25
         },
         {
           "name": "Straight Forecast",
@@ -2368,18 +2420,6 @@
           "plGbp": 70.7,
           "roi": 1.414,
           "avgOdds": 3.02
-        },
-        {
-          "name": "Reverse Forecast",
-          "bets": 2,
-          "calculable": 2,
-          "wins": 2,
-          "places": 0,
-          "losses": 0,
-          "plPts": 6.46,
-          "plGbp": 64.6,
-          "roi": 3.23,
-          "avgOdds": 4.23
         }
       ],
       "recentBets": [
@@ -2641,6 +2681,21 @@
           "calculable": true
         },
         {
+          "date": "2026-09-05",
+          "time": "15:25",
+          "course": "Ascot",
+          "horse": "Gavriel",
+          "tipster": "The Tipping Station",
+          "betType": "Cover/Insure",
+          "odds": 3.5,
+          "stakePts": 1.0,
+          "returnPts": 3.5,
+          "plPts": 2.5,
+          "plGbp": 25.0,
+          "result": "Won",
+          "calculable": true
+        },
+        {
           "date": "2026-09-04",
           "time": "13:40",
           "course": "Bangor-on-Dee",
@@ -2669,21 +2724,6 @@
           "plGbp": 18.0,
           "result": "Won",
           "calculable": true
-        },
-        {
-          "date": "2026-09-10",
-          "time": "15:35",
-          "course": "Doncaster",
-          "horse": "Musical Times",
-          "tipster": "The Tipping Station",
-          "betType": "Win",
-          "odds": 2.75,
-          "stakePts": 1.0,
-          "returnPts": 2.75,
-          "plPts": 1.75,
-          "plGbp": 17.5,
-          "result": "Won",
-          "calculable": true
         }
       ]
     },
@@ -2694,7 +2734,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "August 2026",
-      "updatedAt": "2026-09-11 09:24",
+      "updatedAt": "2026-09-11 10:02",
       "stats": {
         "bets": 314,
         "settled": 314,
@@ -3436,7 +3476,7 @@
       "bankSize": 1000,
       "pointValue": 10,
       "period": "July 2026",
-      "updatedAt": "2026-09-11 09:24",
+      "updatedAt": "2026-09-11 10:02",
       "stats": {
         "bets": 367,
         "settled": 367,
